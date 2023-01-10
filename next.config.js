@@ -5,6 +5,7 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
+  pageExtensions: ['page.tsx', 'api.ts'],
   swcMinify: true,
 
   // Uncoment to add domain whitelist
