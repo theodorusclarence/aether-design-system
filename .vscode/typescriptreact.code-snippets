@@ -184,6 +184,77 @@
   },
   //#endregion  //*======== Snippet Wrap ===========
 
+  //#region  //*=========== Text Typography ===========
+  "Jumbo 1": {
+    "prefix": "tj1",
+    "body": ["<Typography as='h1' variant='j1'>$0</Typography>"]
+  },
+  "Jumbo 2": {
+    "prefix": "tj2",
+    "body": ["<Typography as='h1' variant='j2'>$0</Typography>"]
+  },
+  "Heading 1": {
+    "prefix": "th1",
+    "body": ["<Typography as='h1' variant='h1'>$0</Typography>"]
+  },
+  "Heading 2": {
+    "prefix": "th2",
+    "body": ["<Typography as='h2' variant='h2'>$0</Typography>"]
+  },
+  "Heading 3": {
+    "prefix": "th3",
+    "body": ["<Typography as='h3' variant='h3'>$0</Typography>"]
+  },
+  "Heading 4": {
+    "prefix": "th4",
+    "body": ["<Typography as='h4' variant='h4'>$0</Typography>"]
+  },
+  "Heading 5": {
+    "prefix": "th5",
+    "body": ["<Typography as='h5' variant='h5'>$0</Typography>"]
+  },
+  "Heading 6": {
+    "prefix": "th6",
+    "body": ["<Typography as='h6' variant='h6'>$0</Typography>"]
+  },
+  "Subtitle 1": {
+    "prefix": "ts1",
+    "body": ["<Typography variant='s1'>$0</Typography>"]
+  },
+  "Subtitle 2": {
+    "prefix": "ts2",
+    "body": ["<Typography variant='s2'>$0</Typography>"]
+  },
+  "Subtitle 3": {
+    "prefix": "ts3",
+    "body": ["<Typography variant='s3'>$0</Typography>"]
+  },
+  "Subtitle 4": {
+    "prefix": "ts4",
+    "body": ["<Typography variant='s4'>$0</Typography>"]
+  },
+  "Body 1": {
+    "prefix": "tb1",
+    "body": ["<Typography variant='b1'>$0</Typography>"]
+  },
+  "Body 2": {
+    "prefix": "tb2",
+    "body": ["<Typography variant='b2'>$0</Typography>"]
+  },
+  "Body 3": {
+    "prefix": "tb3",
+    "body": ["<Typography variant='b3'>$0</Typography>"]
+  },
+  "Caption 1": {
+    "prefix": "tc1",
+    "body": ["<Typography variant='c1'>$0</Typography>"]
+  },
+  "Caption 2": {
+    "prefix": "tc2",
+    "body": ["<Typography variant='c2'>$0</Typography>"]
+  },
+  //#endregion  //*======== Text Typography ===========
+
   "Logger": {
     "prefix": "lg",
     "body": [

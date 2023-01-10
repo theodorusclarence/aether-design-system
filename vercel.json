@@ -1,7 +1,52 @@
 {
   "headers": [
     {
-      "source": "/fonts/inter-var-latin.woff2",
+      "source": "/fonts/AvertaStd/AvertaStd-Regular.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/AvertaStd/AvertaStd-RegularItalic.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/AvertaStd/AvertaStd-Semibold.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/AvertaStd/AvertaStd-SemiboldItalic.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/AvertaStd/AvertaStd-Bold.woff2",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/AvertaStd/AvertaStd-BoldItalic.woff2",
       "headers": [
         {
           "key": "Cache-Control",

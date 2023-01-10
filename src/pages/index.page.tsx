@@ -4,8 +4,8 @@ import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
+import Typography from '@/components/typography/Typography';
 
 /**
  * SVGR Support
@@ -26,29 +26,27 @@ export default function HomePage() {
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <Vercel className='text-5xl' />
-            <h1 className='mt-4'>PPDB Ultimate Moon Design System</h1>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
+            <Typography as='h1' variant='j1' className='mt-2'>
+              PPDB Ultimate Moon Design System
+            </Typography>
+            <Typography variant='b3' className='mt-2' color='secondary'>
+              <ArrowLink href='https://github.com/ppdbultimate/design-system-moon'>
                 See the repository
               </ArrowLink>
-            </p>
+            </Typography>
 
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
-
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
+            <div className='mt-6'>
+              <Typography as='h2' variant='h6'>
+                Sandbox:
+              </Typography>
+              <div className='mt-2 flex flex-wrap justify-center gap-2'>
+                {sandbox.map(({ title, route }) => (
+                  <ButtonLink key={route} href={route} variant='light'>
+                    {title}
+                  </ButtonLink>
+                ))}
+              </div>
+            </div>
 
             <footer className='absolute bottom-2 text-gray-700'>
               © {new Date().getFullYear()} By{' '}
@@ -62,3 +60,12 @@ export default function HomePage() {
     </Layout>
   );
 }
+
+//#region  //*=========== Sandbox ===========
+const sandbox = [
+  {
+    title: 'Typography',
+    route: '/sandbox/typography',
+  },
+];
+//#endregion  //*======== Sandbox ===========
