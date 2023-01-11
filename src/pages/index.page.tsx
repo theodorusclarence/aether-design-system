@@ -71,5 +71,9 @@ const sandbox = [
     title: 'Colors',
     route: '/sandbox/colors',
   },
+  {
+    title: 'Form',
+    route: '/sandbox/form',
+  },
 ];
 //#endregion  //*======== Sandbox ===========

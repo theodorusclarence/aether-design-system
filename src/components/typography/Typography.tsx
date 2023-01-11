@@ -24,7 +24,7 @@ const TypographyVariant = [
   'l2',
 ] as const;
 
-const TypographyColor = ['primary', 'secondary', 'tertiary'] as const;
+const TypographyColor = ['primary', 'secondary', 'tertiary', 'danger'] as const;
 const TypographyFont = ['averta', 'inter'] as const;
 
 type TypographyProps<T extends React.ElementType> = {
@@ -97,6 +97,7 @@ export default function Typography<T extends React.ElementType>({
           color === 'primary' && ['text-black'],
           color === 'secondary' && ['text-gray-700'],
           color === 'tertiary' && ['text-gray-500'],
+          color === 'danger' && ['text-red-500'],
         ],
         //#endregion  //*======== Color ===========
         //#region  //*=========== Font ===========
