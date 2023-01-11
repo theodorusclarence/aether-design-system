@@ -4,26 +4,26 @@
 
 :root {
   /* #region  /**=========== Primary Color =========== */
-  --tw-color-primary-50: 240 249 255;
-  --tw-color-primary-100: 224 242 254;
-  --tw-color-primary-200: 186 230 253;
-  --tw-color-primary-300: 125 211 252;
-  --tw-color-primary-400: 56 189 248;
-  --tw-color-primary-500: 14 165 233;
-  --tw-color-primary-600: 2 132 199;
-  --tw-color-primary-700: 3 105 161;
-  --tw-color-primary-800: 7 89 133;
-  --tw-color-primary-900: 12 74 110;
-  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f0f9ff */
-  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #e0f2fe */
-  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bae6fd */
-  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #7dd3fc */
-  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #38bdf8 */
-  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #0ea5e9 */
-  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #0284c7 */
-  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #0369a1 */
-  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
-  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
+  --tw-color-primary-50: 242 242 250;
+  --tw-color-primary-100: 233 232 246;
+  --tw-color-primary-200: 230 228 252;
+  --tw-color-primary-300: 220 217 255;
+  --tw-color-primary-400: 194 190 250;
+  --tw-color-primary-500: 78 70 180;
+  --tw-color-primary-600: 52 43 168;
+  --tw-color-primary-700: 32 24 138;
+  --tw-color-primary-800: 21 14 109;
+  --tw-color-primary-900: 12 7 80;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #F2F2FA */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #E9E8F6 */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #E6E4FC */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #DCD9FF */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #C2BEFA */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #4E46B4 */
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #342BA8 */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #20188A */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #150E6D */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0C0750 */
   /* #endregion  /**======== Primary Color =========== */
 }
 
