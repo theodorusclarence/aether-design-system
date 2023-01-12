@@ -41,7 +41,7 @@ export default function HomePage() {
               </Typography>
               <div className='mt-2 flex flex-wrap justify-center gap-2'>
                 {sandbox.map(({ title, route }) => (
-                  <ButtonLink key={route} href={route} variant='light'>
+                  <ButtonLink key={route} href={route} variant='outline'>
                     {title}
                   </ButtonLink>
                 ))}
@@ -78,6 +78,10 @@ const sandbox = [
   {
     title: 'Text Link & Button',
     route: '/sandbox/text-button',
+  },
+  {
+    title: 'Button',
+    route: '/sandbox/button',
   },
 ];
 //#endregion  //*======== Sandbox ===========

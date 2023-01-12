@@ -7,17 +7,10 @@ import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-const ButtonLinkVariant = [
-  'primary',
-  'outline',
-  'ghost',
-  'light',
-  'dark',
-] as const;
-const ButtonLinkSize = ['sm', 'base'] as const;
+const ButtonLinkVariant = ['primary', 'secondary', 'outline', 'ghost'] as const;
+const ButtonLinkSize = ['sm', 'base', 'lg'] as const;
 
 type ButtonLinkProps = {
-  isDarkBg?: boolean;
   variant?: typeof ButtonLinkVariant[number];
   size?: typeof ButtonLinkSize[number];
   leftIcon?: IconType;
@@ -33,7 +26,6 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       className,
       variant = 'primary',
       size = 'base',
-      isDarkBg = false,
       leftIcon: LeftIcon,
       rightIcon: RightIcon,
       leftIconClassName,
@@ -47,14 +39,24 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         ref={ref}
         {...rest}
         className={clsxm(
-          'inline-flex items-center rounded font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'inline-flex items-center justify-center rounded-lg font-medium',
+          'focus:outline-none focus-visible:ring',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
           [
-            size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
-            size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'lg' && [
+              'min-h-[3rem] px-4 md:min-h-[2.75rem]',
+              'text-base',
+            ],
+            size === 'base' && [
+              'min-h-[2.25rem] px-4 md:min-h-[2.5rem]',
+              'text-sm md:text-base',
+            ],
+            size === 'sm' && [
+              'min-h-[1.75rem] px-3 md:min-h-[2rem]',
+              'text-xs md:text-sm',
+            ],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
@@ -65,31 +67,25 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
+              'focus-visible:ring-primary-400',
+            ],
+            variant === 'secondary' && [
+              'bg-secondary-500 text-white',
+              'border border-secondary-600',
+              'hover:bg-secondary-600 hover:text-white',
+              'active:bg-secondary-700',
+              'disabled:bg-secondary-700',
+              'focus-visible:ring-secondary-400',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              'text-typo',
+              'border border-gray-300',
+              'hover:bg-light focus-visible:ring-primary-400 active:bg-typo-divider disabled:bg-typo-divider',
             ],
             variant === 'ghost' && [
               'text-primary-500',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-gray-700',
-              'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+              'hover:bg-primary-50 focus-visible:ring-primary-400 active:bg-primary-100 disabled:bg-primary-100',
             ],
           ],
           //#endregion  //*======== Variants ===========
@@ -100,38 +96,24 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         {LeftIcon && (
           <div
             className={clsxm([
-              size === 'base' && 'mr-1',
-              size === 'sm' && 'mr-1.5',
+              size === 'lg' && 'mr-3',
+              size === 'base' && 'mr-2',
+              size === 'sm' && 'mr-1',
             ])}
           >
-            <LeftIcon
-              className={clsxm(
-                [
-                  size === 'base' && 'md:text-md text-md',
-                  size === 'sm' && 'md:text-md text-sm',
-                ],
-                leftIconClassName
-              )}
-            />
+            <LeftIcon className={clsxm('text-base', leftIconClassName)} />
           </div>
         )}
         {children}
         {RightIcon && (
           <div
             className={clsxm([
-              size === 'base' && 'ml-1',
-              size === 'sm' && 'ml-1.5',
+              size === 'lg' && 'ml-3',
+              size === 'base' && 'ml-2',
+              size === 'sm' && 'ml-1',
             ])}
           >
-            <RightIcon
-              className={clsxm(
-                [
-                  size === 'base' && 'text-md md:text-md',
-                  size === 'sm' && 'md:text-md text-sm',
-                ],
-                rightIconClassName
-              )}
-            />
+            <RightIcon className={clsxm('text-base', rightIconClassName)} />
           </div>
         )}
       </UnstyledLink>
