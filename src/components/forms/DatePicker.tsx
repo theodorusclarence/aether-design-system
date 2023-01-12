@@ -67,7 +67,8 @@ export default function DatePicker({
                 onBlur={onBlur}
                 selected={value ? new Date(value) : undefined}
                 className={clsx(
-                  'block w-full rounded-lg shadow-sm',
+                  'flex w-full rounded-lg shadow-sm',
+                  'min-h-[2.25rem] py-0 md:min-h-[2.5rem]',
                   'border-gray-300 focus:border-primary-500 focus:ring-primary-500',
                   (readOnly || disabled) &&
                     'cursor-not-allowed border-gray-300 bg-gray-100 focus:border-gray-300 focus:ring-0',

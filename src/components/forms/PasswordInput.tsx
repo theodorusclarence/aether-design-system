@@ -67,7 +67,8 @@ export default function PasswordInput({
           readOnly={readOnly}
           disabled={disabled}
           className={clsx(
-            'block w-full rounded-lg shadow-sm',
+            'flex w-full rounded-lg shadow-sm',
+            'min-h-[2.25rem] py-0 md:min-h-[2.5rem]',
             'pr-10',
             'border-gray-300 focus:border-primary-500 focus:ring-primary-500',
             (readOnly || disabled) &&

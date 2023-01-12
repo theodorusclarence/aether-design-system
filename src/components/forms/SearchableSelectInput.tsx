@@ -58,7 +58,7 @@ export default function SearchableSelectInput({
         boxShadow: 'none !important',
       },
       borderRadius: '0.5rem',
-      padding: '0.5rem 0.75rem',
+      padding: '0 0.75rem',
       background: disabled || readOnly ? '#F3F4F6' : undefined,
     }),
     valueContainer: (styles) => ({
@@ -147,7 +147,7 @@ export default function SearchableSelectInput({
         boxShadow: 'none !important',
       },
       borderRadius: '0.5rem',
-      padding: '0.5rem 0.75rem',
+      padding: '0 0.75rem',
     }),
     valueContainer: (styles) => ({
       ...styles,
@@ -242,6 +242,9 @@ export default function SearchableSelectInput({
                 closeMenuOnSelect={!isMulti}
                 placeholder={placeholder}
                 options={options}
+                classNames={{
+                  control: () => '!min-h-[2.25rem] md:!min-h-[2.5rem]',
+                }}
                 styles={styles}
                 components={{
                   IndicatorSeparator: () => null,
