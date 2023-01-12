@@ -75,5 +75,9 @@ const sandbox = [
     title: 'Form',
     route: '/sandbox/form',
   },
+  {
+    title: 'Text Link & Button',
+    route: '/sandbox/text-button',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
