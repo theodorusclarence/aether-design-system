@@ -6,16 +6,17 @@ import clsxm from '@/lib/clsxm';
 
 const IconButtonVariant = [
   'primary',
+  'secondary',
+  'danger',
   'outline',
   'ghost',
-  'light',
-  'dark',
 ] as const;
+const IconButtonSize = ['sm', 'base', 'lg'] as const;
 
 type IconButtonProps = {
   isLoading?: boolean;
-  isDarkBg?: boolean;
   variant?: typeof IconButtonVariant[number];
+  size?: typeof IconButtonSize[number];
   icon?: IconType;
   iconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
@@ -27,7 +28,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       disabled: buttonDisabled,
       isLoading,
       variant = 'primary',
-      isDarkBg = false,
+      size = 'base',
       icon: Icon,
       iconClassName,
       ...rest
@@ -42,11 +43,26 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center justify-center rounded font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'inline-flex items-center justify-center rounded-lg font-medium',
+          'focus:outline-none focus-visible:ring',
           'shadow-sm',
           'transition-colors duration-75',
-          'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
+          //#region  //*=========== Size ===========
+          [
+            size === 'lg' && [
+              'min-h-[2.75rem] min-w-[2.75rem] md:min-h-[3rem] md:min-w-[3rem]',
+              'text-base',
+            ],
+            size === 'base' && [
+              'min-h-[2.25rem] min-w-[2.25rem] md:min-h-[2.5rem] md:min-w-[2.5rem]',
+              'text-sm md:text-base',
+            ],
+            size === 'sm' && [
+              'min-h-[1.75rem] min-w-[1.75rem] md:min-h-[2rem] md:min-w-[2rem]',
+              'text-xs md:text-sm',
+            ],
+          ],
+          //#region  //*=========== Variants ===========
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
@@ -55,31 +71,33 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
               'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
+              'focus-visible:ring-primary-400',
+            ],
+            variant === 'secondary' && [
+              'bg-secondary-500 text-white',
+              'border border-secondary-600',
+              'hover:bg-secondary-600 hover:text-white',
+              'active:bg-secondary-700',
+              'disabled:bg-secondary-700',
+              'focus-visible:ring-secondary-400',
+            ],
+            variant === 'danger' && [
+              'bg-red-500 text-white',
+              'border border-red-600',
+              'hover:bg-red-600 hover:text-white',
+              'active:bg-red-700',
+              'disabled:bg-red-700',
+              'focus-visible:ring-red-400',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              'text-typo',
+              'border border-gray-300',
+              'hover:bg-light focus-visible:ring-primary-400 active:bg-typo-divider disabled:bg-typo-divider',
             ],
             variant === 'ghost' && [
               'text-primary-500',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-gray-700',
-              'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+              'hover:bg-primary-50 focus-visible:ring-primary-400 active:bg-primary-100 disabled:bg-primary-100',
             ],
           ],
           //#endregion  //*======== Variants ===========
@@ -95,8 +113,9 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
             className={clsxm(
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               {
-                'text-white': ['primary', 'dark'].includes(variant),
-                'text-black': ['light'].includes(variant),
+                'text-white': ['primary', 'secondary', 'danger'].includes(
+                  variant
+                ),
                 'text-primary-500': ['outline', 'ghost'].includes(variant),
               }
             )}

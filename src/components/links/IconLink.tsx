@@ -9,15 +9,16 @@ import UnstyledLink, {
 
 const IconLinkVariant = [
   'primary',
+  'secondary',
+  'danger',
   'outline',
   'ghost',
-  'light',
-  'dark',
 ] as const;
+const IconLinkSize = ['sm', 'base', 'lg'] as const;
 
 type IconLinkProps = {
-  isDarkBg?: boolean;
   variant?: typeof IconLinkVariant[number];
+  size?: typeof IconLinkSize[number];
   icon?: IconType;
   iconClassName?: string;
 } & Omit<UnstyledLinkProps, 'children'>;
@@ -28,7 +29,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
       className,
       icon: Icon,
       variant = 'outline',
-      isDarkBg = false,
+      size = 'base',
       iconClassName,
       ...rest
     },
@@ -39,11 +40,26 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
         ref={ref}
         type='button'
         className={clsxm(
-          'inline-flex items-center justify-center rounded font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'inline-flex items-center justify-center rounded-lg font-medium',
+          'focus:outline-none focus-visible:ring',
           'shadow-sm',
           'transition-colors duration-75',
-          'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
+          //#region  //*=========== Size ===========
+          [
+            size === 'lg' && [
+              'min-h-[2.75rem] min-w-[2.75rem] md:min-h-[3rem] md:min-w-[3rem]',
+              'text-base',
+            ],
+            size === 'base' && [
+              'min-h-[2.25rem] min-w-[2.25rem] md:min-h-[2.5rem] md:min-w-[2.5rem]',
+              'text-sm md:text-base',
+            ],
+            size === 'sm' && [
+              'min-h-[1.75rem] min-w-[1.75rem] md:min-h-[2rem] md:min-w-[2rem]',
+              'text-xs md:text-sm',
+            ],
+          ],
+          //#region  //*=========== Variants ===========
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
@@ -52,31 +68,33 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
               'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
+              'focus-visible:ring-primary-400',
+            ],
+            variant === 'secondary' && [
+              'bg-secondary-500 text-white',
+              'border border-secondary-600',
+              'hover:bg-secondary-600 hover:text-white',
+              'active:bg-secondary-700',
+              'disabled:bg-secondary-700',
+              'focus-visible:ring-secondary-400',
+            ],
+            variant === 'danger' && [
+              'bg-red-500 text-white',
+              'border border-red-600',
+              'hover:bg-red-600 hover:text-white',
+              'active:bg-red-700',
+              'disabled:bg-red-700',
+              'focus-visible:ring-red-400',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
+              'text-typo',
+              'border border-gray-300',
+              'hover:bg-light focus-visible:ring-primary-400 active:bg-typo-divider disabled:bg-typo-divider',
             ],
             variant === 'ghost' && [
               'text-primary-500',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
-              isDarkBg &&
-                'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
-            ],
-            variant === 'light' && [
-              'bg-white text-gray-700',
-              'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
-              'active:bg-white/80 disabled:bg-gray-200',
-            ],
-            variant === 'dark' && [
-              'bg-gray-900 text-white',
-              'border border-gray-600',
-              'hover:bg-gray-800 active:bg-gray-700 disabled:bg-gray-700',
+              'hover:bg-primary-50 focus-visible:ring-primary-400 active:bg-primary-100 disabled:bg-primary-100',
             ],
           ],
           //#endregion  //*======== Variants ===========
