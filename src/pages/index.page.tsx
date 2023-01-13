@@ -83,5 +83,9 @@ const sandbox = [
     title: 'Button',
     route: '/sandbox/button',
   },
+  {
+    title: 'Breadcrumb',
+    route: '/sandbox/breadcrumb',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
