@@ -91,5 +91,9 @@ const sandbox = [
     title: 'Icon Button',
     route: '/sandbox/icon-button',
   },
+  {
+    title: 'React Query & Toast',
+    route: '/sandbox/toast-rq',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
