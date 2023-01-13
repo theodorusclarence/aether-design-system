@@ -22,13 +22,11 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
         className={clsxm(
           'button inline-flex items-center justify-center font-semibold',
           'focus:outline-none focus-visible:ring',
-          'transition duration-100 after:transition after:duration-100',
-          "relative after:absolute after:inset-x-0 after:h-[2px] after:bg-current after:content-['']",
-          'hover:after:opacity-0 active:after:opacity-100 disabled:hover:after:opacity-100',
+          'transition duration-100',
+          'underline decoration-current hover:decoration-white/0 active:decoration-current disabled:hover:decoration-current',
           //#region  //*=========== Size ===========
-          size === 'sm' &&
-            'text-xs after:bottom-[1px] md:text-sm md:after:bottom-[3px]',
-          size === 'base' && 'text-sm after:bottom-0 md:text-base',
+          size === 'sm' && 'text-xs md:text-sm',
+          size === 'base' && 'text-sm  md:text-base',
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variant ===========
           variant === 'primary' && [
