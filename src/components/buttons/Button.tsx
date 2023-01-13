@@ -55,7 +55,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           //#region  //*=========== Size ===========
           [
             size === 'lg' && [
-              'min-h-[3rem] px-4 md:min-h-[2.75rem]',
+              'min-h-[2.75rem] px-4 md:min-h-[3rem]',
               'text-base',
             ],
             size === 'base' && [
