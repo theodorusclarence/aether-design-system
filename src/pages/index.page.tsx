@@ -95,5 +95,9 @@ const sandbox = [
     title: 'React Query & Toast',
     route: '/sandbox/toast-rq',
   },
+  {
+    title: 'Modal',
+    route: '/sandbox/modal',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
