@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { GiExplosionRays } from 'react-icons/gi';
 
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
@@ -6,15 +7,6 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
 import Typography from '@/components/typography/Typography';
-
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
-import Vercel from '~/svg/Vercel.svg';
 
 export default function HomePage() {
   return (
@@ -24,13 +16,19 @@ export default function HomePage() {
 
       <main>
         <section className='bg-white'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
-            <Vercel className='text-5xl' />
+          <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
+            <GiExplosionRays className='text-6xl text-yellow-400' />
+
             <Typography as='h1' variant='j1' className='mt-2'>
-              PPDB Ultimate Moon Design System
+              Aether Design System
             </Typography>
-            <Typography variant='b3' className='mt-2' color='secondary'>
-              <ArrowLink href='https://github.com/ppdbultimate/design-system-moon'>
+            <Typography variant='b3' color='tertiary'>
+              Inspired by{' '}
+              <UnderlineLink href='https://moon.io'>moon.io</UnderlineLink>,
+              adjusted to our needs
+            </Typography>
+            <Typography variant='b3' className='mt-6' color='secondary'>
+              <ArrowLink href='https://github.com/theodorusclarence/aether-design-system'>
                 See the repository
               </ArrowLink>
             </Typography>
@@ -50,8 +48,16 @@ export default function HomePage() {
 
             <footer className='absolute bottom-2 text-gray-700'>
               © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
+              <UnderlineLink href='https://theodorusclarence.com?ref=aether-design-system'>
+                Clarence
+              </UnderlineLink>
+              {', '}
+              <UnderlineLink href='https://rizqitsani.com?ref=aether-design-system'>
+                Rizqi
+              </UnderlineLink>
+              {', '}
+              <UnderlineLink href='https://github.com/winatungmiharja?ref=aether-design-system'>
+                Wina
               </UnderlineLink>
             </footer>
           </div>

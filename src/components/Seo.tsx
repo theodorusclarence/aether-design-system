@@ -4,11 +4,11 @@ import { useRouter } from 'next/router';
 import { openGraph } from '@/lib/helper';
 
 const defaultMeta = {
-  title: 'PPDB Ultimate Moon Design System',
-  siteName: 'PPDB Ultimate Moon Design System',
-  description: 'Design system used on PPDB Ultimate projects',
+  title: 'Aether Design System',
+  siteName: 'Aether Design System',
+  description: 'Design system used on projects',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://design-system-moon.vercel.app',
+  url: 'https://aether.thcl.dev',
   type: 'website',
   robots: 'follow, index',
   /**
