@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['var(--font-inter)', ...fontFamily.sans],
-        averta: ['var(--font-averta)', ...fontFamily.sans],
+        primary: ['Inter', ...fontFamily.sans],
+        averta: ['AvertaStd', ...fontFamily.sans],
       },
       colors: {
         primary: {
