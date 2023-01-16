@@ -4,12 +4,19 @@ import {
   QueryOptions,
 } from '@tanstack/react-query';
 import { AppProps } from 'next/app';
+import Router from 'next/router';
+import nProgress from 'nprogress';
 
+import '@/styles/nprogress.css';
 import '@/styles/globals.css';
 
 import api from '@/lib/axios';
 
 import DismissableToast from '@/components/DismissableToast';
+
+Router.events.on('routeChangeStart', nProgress.start);
+Router.events.on('routeChangeError', nProgress.done);
+Router.events.on('routeChangeComplete', nProgress.done);
 
 const defaultQueryFn = async ({ queryKey }: QueryOptions) => {
   const { data } = await api.get(`${queryKey?.[0]}`);
