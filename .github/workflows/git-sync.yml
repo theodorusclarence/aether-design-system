@@ -1,0 +1,20 @@
+name: Git Sync
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  git-sync:
+    if: ${{ github.repository == 'ppdbultimate/design-system-moon' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+      - name: 🔗 Synchronize Repository
+        uses: wei/git-sync@v3
+        with:
+          source_repo: 'https://theodorusclarence:${{ secrets.PAT }}@github.com/ppdbultimate/design-system-moon.git'
+          source_branch: 'main'
+          destination_repo: 'https://theodorusclarence:${{ secrets.PAT }}@github.com/theodorusclarence/aether-design-system.git'
+          destination_branch: 'main'
