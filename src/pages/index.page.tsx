@@ -109,5 +109,9 @@ const sandbox = [
     title: 'Dialog',
     route: '/sandbox/dialog',
   },
+  {
+    title: 'Table',
+    route: '/sandbox/table',
+  },
 ];
 //#endregion  //*======== Sandbox ===========

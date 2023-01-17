@@ -12,7 +12,7 @@ import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import Typography from '@/components/typography/Typography';
 
-import { ApiError, ApiReturn } from '@/types/api';
+import { ApiError, ApiResponse } from '@/types/api';
 
 type User = {
   id: number;
@@ -30,12 +30,12 @@ export default function SandboxPage() {
     data: mutationData,
     isLoading,
     mutate,
-  } = useMutationToast<ApiReturn<undefined>, LoginData>(
+  } = useMutationToast<ApiResponse<undefined>, LoginData>(
     useMutation((data) => apiMock.post('/login', data).then((res) => res.data))
   );
 
   const { data: queryData } = useQueryToast(
-    useQuery<ApiReturn<User>, AxiosError<ApiError>>(['/me'], mockQuery)
+    useQuery<ApiResponse<User>, AxiosError<ApiError>>(['/me'], mockQuery)
   );
 
   return (
