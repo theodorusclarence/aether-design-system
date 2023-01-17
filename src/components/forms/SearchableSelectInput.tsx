@@ -60,6 +60,7 @@ export default function SearchableSelectInput({
       borderRadius: '0.5rem',
       padding: '0 0.75rem',
       background: disabled || readOnly ? '#F3F4F6' : undefined,
+      cursor: 'pointer',
     }),
     valueContainer: (styles) => ({
       ...styles,
@@ -96,6 +97,7 @@ export default function SearchableSelectInput({
       ':hover': {
         background: '#E5E7EB',
       },
+      cursor: 'pointer',
     }),
     multiValue: (styles) => ({
       ...styles,
@@ -148,6 +150,7 @@ export default function SearchableSelectInput({
       },
       borderRadius: '0.5rem',
       padding: '0 0.75rem',
+      cursor: 'pointer',
     }),
     valueContainer: (styles) => ({
       ...styles,
@@ -183,6 +186,7 @@ export default function SearchableSelectInput({
       ':hover': {
         background: '#E5E7EB',
       },
+      cursor: 'pointer',
     }),
     menu: (styles) => ({
       ...styles,
