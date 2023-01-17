@@ -43,16 +43,18 @@ export default function SearchableSelectInput({
   const customStyles: StylesConfig = {
     control: (styles) => ({
       ...styles,
-      // gray-300
-      border: '1px solid #D1D5DB',
+      // red-500 and gray-300
+      border: `1px solid ${error ? '#EF4444' : '#D1D5DB'}`,
       '&:hover': {
-        border: '1px solid #D1D5DB',
+        border: `1px solid ${error ? '#EF4444' : '#D1D5DB'}`,
       },
       boxShadow: 'none',
       transition: 'none',
       '&:focus-within': {
-        border: '1px solid var(--color-primary-500)',
-        boxShadow: '0 0 0 1px var(--color-primary-500)',
+        border: `1px solid ${error ? 'var(--color-primary-500)' : '#D1D5DB'}`,
+        boxShadow: `0 0 0 1px ${
+          error ? 'var(--color-primary-500)' : '#D1D5DB'
+        }`,
       },
       '*': {
         boxShadow: 'none !important',
@@ -131,69 +133,6 @@ export default function SearchableSelectInput({
       overflow: 'hidden',
     }),
   };
-  const errorStyles: StylesConfig = {
-    control: (styles) => ({
-      ...styles,
-      // red-500
-      border: '1px solid #EF4444',
-      '&:hover': {
-        border: '1px solid #EF4444',
-      },
-      boxShadow: 'none',
-      transition: 'none',
-      '&:focus-within': {
-        border: '1px solid #EF4444',
-        boxShadow: '0 0 0 1px #EF4444',
-      },
-      '*': {
-        boxShadow: 'none !important',
-      },
-      borderRadius: '0.5rem',
-      padding: '0 0.75rem',
-      cursor: 'pointer',
-    }),
-    valueContainer: (styles) => ({
-      ...styles,
-      padding: 0,
-    }),
-    input: (styles) => ({
-      ...styles,
-      padding: 0,
-      margin: 0,
-      caretColor: 'var(--color-primary-500)',
-      color: '#1F201d',
-      '::placeholder': {
-        color: '#5a5d56',
-      },
-    }),
-    indicatorsContainer: (styles) => ({
-      ...styles,
-      '&>div': {
-        padding: 0,
-      },
-    }),
-    dropdownIndicator: (styles) => ({
-      ...styles,
-      color: '#878787',
-      '&:hover': {
-        color: '#878787',
-      },
-    }),
-    option: (styles, state) => ({
-      ...styles,
-      color: 'black',
-      background: state.isSelected ? '#D1D5DB' : 'white',
-      ':hover': {
-        background: '#E5E7EB',
-      },
-      cursor: 'pointer',
-    }),
-    menu: (styles) => ({
-      ...styles,
-      borderRadius: '0.5rem',
-      overflow: 'hidden',
-    }),
-  };
 
   //#endregion  //*======== Styles ===========
 
@@ -215,7 +154,6 @@ export default function SearchableSelectInput({
           control={control}
           rules={validation}
           render={({ field }) => {
-            const styles = error ? errorStyles : customStyles;
             return (
               <Select
                 {...field}
@@ -249,7 +187,7 @@ export default function SearchableSelectInput({
                 classNames={{
                   control: () => '!min-h-[2.25rem] md:!min-h-[2.5rem]',
                 }}
-                styles={styles}
+                styles={customStyles}
                 components={{
                   IndicatorSeparator: () => null,
                   DropdownIndicator: (props) => (
