@@ -144,7 +144,7 @@ export default function FormSandbox() {
               </div>
 
               <div className='space-y-2'>
-                <Typography variant='b1'>Language</Typography>
+                <Typography variant='s2'>Language</Typography>
                 <Radio
                   name='language'
                   label='CSS'
