@@ -113,5 +113,9 @@ const sandbox = [
     title: 'Table',
     route: '/sandbox/table',
   },
+  {
+    title: 'Tooltip',
+    route: '/sandbox/tooltip',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
