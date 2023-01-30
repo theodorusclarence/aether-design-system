@@ -58,59 +58,72 @@ type TypographyProps<T extends React.ElementType> = {
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<T>;
 
-export default function Typography<T extends React.ElementType>({
-  as,
-  children,
-  className,
-  color = 'primary',
-  variant,
-  font,
-  ...rest
-}: TypographyProps<T>) {
-  const Component = as || 'p';
-  return (
-    <Component
-      className={clsxm(
-        //#region  //*=========== Variants ===========
-        [
-          variant === 'j1' && ['font-averta text-4xl font-bold'],
-          variant === 'j2' && ['font-averta text-3xl font-bold'],
-          variant === 'h1' && ['font-averta text-2xl font-semibold'],
-          variant === 'h2' && ['font-averta text-xl font-semibold'],
-          variant === 'h3' && ['font-averta text-lg font-semibold'],
-          variant === 'h4' && ['font-averta text-base font-bold'],
-          variant === 'h5' && ['font-averta text-base font-semibold'],
-          variant === 'h6' && ['font-averta text-sm font-semibold'],
-          variant === 's1' && ['text-lg font-medium'],
-          variant === 's2' && ['text-base font-medium'],
-          variant === 's3' && ['text-sm font-medium'],
-          variant === 's4' && ['text-xs font-medium'],
-          variant === 'b1' && ['text-lg'],
-          variant === 'b2' && ['font-primary text-base'],
-          variant === 'b3' && ['text-sm font-normal'],
-          variant === 'c1' && ['text-xs'],
-          variant === 'c2' && ['text-[11px] leading-[14px]'],
-        ],
-        //#endregion  //*======== Variants ===========
-        //#region  //*=========== Color ===========
-        [
-          color === 'primary' && ['text-black'],
-          color === 'secondary' && ['text-gray-700'],
-          color === 'tertiary' && ['text-gray-500'],
-          color === 'danger' && ['text-red-500'],
-        ],
-        //#endregion  //*======== Color ===========
-        //#region  //*=========== Font ===========
-        [
-          font === 'averta' && ['font-averta'],
-          font === 'inter' && ['font-primary'],
-        ],
-        //#endregion  //*======== Font ===========
-        className
-      )}
-      {...rest}
-    >
-      {children}
-    </Component>
-  );
-}
+/** @see https://www.benmvp.com/blog/forwarding-refs-polymorphic-react-component-typescript/ */
+type TypographyComponent = <T extends React.ElementType = 'p'>(
+  props: TypographyProps<T>
+) => React.ReactElement | null;
+
+const Typography: TypographyComponent = React.forwardRef(
+  <T extends React.ElementType = 'p'>(
+    {
+      as,
+      children,
+      className,
+      color = 'primary',
+      variant,
+      font,
+      ...rest
+    }: TypographyProps<T>,
+    ref?: React.ComponentPropsWithRef<T>['ref']
+  ) => {
+    const Component = as || 'p';
+    return (
+      <Component
+        ref={ref}
+        className={clsxm(
+          //#region  //*=========== Variants ===========
+          [
+            variant === 'j1' && ['font-averta text-4xl font-bold'],
+            variant === 'j2' && ['font-averta text-3xl font-bold'],
+            variant === 'h1' && ['font-averta text-2xl font-semibold'],
+            variant === 'h2' && ['font-averta text-xl font-semibold'],
+            variant === 'h3' && ['font-averta text-lg font-semibold'],
+            variant === 'h4' && ['font-averta text-base font-bold'],
+            variant === 'h5' && ['font-averta text-base font-semibold'],
+            variant === 'h6' && ['font-averta text-sm font-semibold'],
+            variant === 's1' && ['text-lg font-medium'],
+            variant === 's2' && ['text-base font-medium'],
+            variant === 's3' && ['text-sm font-medium'],
+            variant === 's4' && ['text-xs font-medium'],
+            variant === 'b1' && ['text-lg'],
+            variant === 'b2' && ['font-primary text-base'],
+            variant === 'b3' && ['text-sm font-normal'],
+            variant === 'c1' && ['text-xs'],
+            variant === 'c2' && ['text-[11px] leading-[14px]'],
+          ],
+          //#endregion  //*======== Variants ===========
+          //#region  //*=========== Color ===========
+          [
+            color === 'primary' && ['text-black'],
+            color === 'secondary' && ['text-gray-700'],
+            color === 'tertiary' && ['text-gray-500'],
+            color === 'danger' && ['text-red-500'],
+          ],
+          //#endregion  //*======== Color ===========
+          //#region  //*=========== Font ===========
+          [
+            font === 'averta' && ['font-averta'],
+            font === 'inter' && ['font-primary'],
+          ],
+          //#endregion  //*======== Font ===========
+          className
+        )}
+        {...rest}
+      >
+        {children}
+      </Component>
+    );
+  }
+);
+
+export default Typography;

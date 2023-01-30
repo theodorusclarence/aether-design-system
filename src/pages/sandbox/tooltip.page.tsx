@@ -35,6 +35,21 @@ export default function TooltipPage() {
                 </Tooltip>
               </TooltipProvider>
             </div>
+
+            <div className='mt-8'>
+              <TooltipProvider delayDuration={300}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Typography variant='b2' className='inline-block'>
+                      Hover me again, but from typography component
+                    </Typography>
+                  </TooltipTrigger>
+                  <TooltipContent side='bottom'>
+                    <Typography variant='b2'>Hover content</Typography>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
           </div>
         </section>
       </main>
