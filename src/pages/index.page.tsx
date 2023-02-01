@@ -125,5 +125,9 @@ const sandbox = [
     title: 'Popover',
     route: '/sandbox/popover',
   },
+  {
+    title: 'Banner',
+    route: '/sandbox/banner',
+  },
 ];
 //#endregion  //*======== Sandbox ===========

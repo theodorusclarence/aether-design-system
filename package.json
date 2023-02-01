@@ -41,6 +41,8 @@
     "react-icons": "^4.7.1",
     "react-image-lightbox": "^5.1.4",
     "react-select": "^5.7.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^1.8.1",
     "tailwindcss-animate": "^1.0.5",
     "zustand": "^4.3.1"
@@ -56,6 +58,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.26",
     "@types/react-datepicker": "^4.8.0",
+    "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
     "autoprefixer": "^10.4.13",
