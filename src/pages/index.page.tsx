@@ -121,5 +121,9 @@ const sandbox = [
     title: 'Mac Card',
     route: '/sandbox/mac-cards',
   },
+  {
+    title: 'Popover',
+    route: '/sandbox/popover',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
