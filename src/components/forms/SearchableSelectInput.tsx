@@ -51,9 +51,9 @@ export default function SearchableSelectInput({
       boxShadow: 'none',
       transition: 'none',
       '&:focus-within': {
-        border: `1px solid ${error ? 'var(--color-primary-500)' : '#D1D5DB'}`,
+        border: `1px solid ${error ? '#EF4444' : 'var(--color-primary-500)'}`,
         boxShadow: `0 0 0 1px ${
-          error ? 'var(--color-primary-500)' : '#D1D5DB'
+          error ? '#EF4444' : 'var(--color-primary-500)'
         }`,
       },
       '*': {
