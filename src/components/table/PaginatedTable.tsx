@@ -7,6 +7,7 @@ import {
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
+import clsx from 'clsx';
 import * as React from 'react';
 import { FiList } from 'react-icons/fi';
 
@@ -80,7 +81,12 @@ export default function PaginatedTable<T extends object>({
         )}
       </pre>
 
-      <div className='flex justify-between'>
+      <div
+        className={clsx(
+          'flex flex-col items-stretch gap-3 sm:flex-row',
+          withFilter ? 'sm:justify-between' : 'sm:justify-end'
+        )}
+      >
         {withFilter && <Filter table={table} />}
         <div className='flex gap-3'>
           <TOption

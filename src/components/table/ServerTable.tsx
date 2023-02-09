@@ -5,6 +5,7 @@ import {
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
+import clsx from 'clsx';
 import * as React from 'react';
 import { FiList } from 'react-icons/fi';
 
@@ -74,7 +75,12 @@ export default function ServerTable<T extends object>({
 
   return (
     <div className={clsxm('flex flex-col', className)} {...rest}>
-      <div className='flex flex-col items-stretch gap-3 sm:flex-row sm:justify-between'>
+      <div
+        className={clsx(
+          'flex flex-col items-stretch gap-3 sm:flex-row',
+          withFilter ? 'sm:justify-between' : 'sm:justify-end'
+        )}
+      >
         {withFilter && <Filter table={table} />}
         <div className='flex items-center gap-3'>
           {Header}
