@@ -6,6 +6,8 @@ import { HiOutlineCalendar } from 'react-icons/hi';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
+import clsxm from '@/lib/clsxm';
+
 import Typography from '@/components/typography/Typography';
 
 type DatePickerProps = {
@@ -20,6 +22,7 @@ type DatePickerProps = {
   readOnly?: boolean;
   /** Disable error style (not disabling error validation) */
   hideError?: boolean;
+  containerClassName?: string;
 } & Omit<ReactDatePickerProps, 'onChange'>;
 
 export default function DatePicker({
@@ -34,6 +37,7 @@ export default function DatePicker({
   readOnly = false,
   hideError = false,
   disabled,
+  containerClassName,
   ...rest
 }: DatePickerProps) {
   const {
@@ -48,7 +52,7 @@ export default function DatePicker({
   if (defaultMonth) defaultDate.setMonth(defaultMonth);
 
   return (
-    <div className='relative'>
+    <div className={clsxm('relative', containerClassName)}>
       <Typography as='label' variant='s3' className='block' htmlFor={id}>
         {label}
       </Typography>

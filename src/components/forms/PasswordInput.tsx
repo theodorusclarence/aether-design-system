@@ -29,6 +29,7 @@ export type PasswordInputProps = {
   hideError?: boolean;
   /** Manual validation using RHF, it is encouraged to use yup resolver instead */
   validation?: RegisterOptions;
+  containerClassName?: string;
 } & React.ComponentPropsWithoutRef<'input'>;
 
 export default function PasswordInput({
@@ -40,6 +41,7 @@ export default function PasswordInput({
   hideError,
   validation,
   disabled,
+  containerClassName,
   ...rest
 }: PasswordInputProps) {
   const {
@@ -53,7 +55,7 @@ export default function PasswordInput({
   const togglePassword = () => setShowPassword((prev) => !prev);
 
   return (
-    <div>
+    <div className={containerClassName}>
       <Typography as='label' variant='s3' className='block' htmlFor={id}>
         {label}
       </Typography>

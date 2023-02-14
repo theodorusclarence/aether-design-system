@@ -17,6 +17,7 @@ export type SearchableSelectInputProps = {
   hideError?: boolean;
   validation?: RegisterOptions;
   options: { value: string; label: string }[];
+  containerClassName?: string;
 } & React.ComponentPropsWithoutRef<'select'>;
 
 export default function SearchableSelectInput({
@@ -30,6 +31,7 @@ export default function SearchableSelectInput({
   validation,
   options,
   hideError = false,
+  containerClassName,
 }: SearchableSelectInputProps) {
   const {
     control,
@@ -137,7 +139,7 @@ export default function SearchableSelectInput({
   //#endregion  //*======== Styles ===========
 
   return (
-    <div>
+    <div className={containerClassName}>
       {withLabel && (
         <Typography as='label' variant='s3' className='block' htmlFor={id}>
           {label}

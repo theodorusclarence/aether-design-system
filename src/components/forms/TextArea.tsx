@@ -12,6 +12,7 @@ export type TextAreaProps = {
   readOnly?: boolean;
   hideError?: boolean;
   validation?: RegisterOptions;
+  containerClassName?: string;
 } & React.ComponentPropsWithoutRef<'textarea'>;
 
 export default function TextArea({
@@ -23,6 +24,7 @@ export default function TextArea({
   hideError = false,
   validation,
   disabled,
+  containerClassName,
   ...rest
 }: TextAreaProps) {
   const {
@@ -32,7 +34,7 @@ export default function TextArea({
   const error = get(errors, id);
 
   return (
-    <div>
+    <div className={containerClassName}>
       <Typography as='label' variant='s3' className='block' htmlFor={id}>
         {label}
       </Typography>

@@ -31,6 +31,7 @@ export type InputProps = {
   validation?: RegisterOptions;
   leftIcon?: IconType | string;
   rightNode?: React.ReactNode;
+  containerClassName?: string;
 } & React.ComponentPropsWithoutRef<'input'>;
 
 export default function Input({
@@ -45,6 +46,7 @@ export default function Input({
   validation,
   leftIcon: LeftIcon,
   rightNode,
+  containerClassName,
   ...rest
 }: InputProps) {
   const {
@@ -55,7 +57,7 @@ export default function Input({
 
   const withLabel = label !== null;
   return (
-    <div>
+    <div className={containerClassName}>
       {withLabel && (
         <Typography as='label' variant='s3' className='block' htmlFor={id}>
           {label}
