@@ -31,7 +31,7 @@ type TypographyProps<T extends React.ElementType> = {
   /** @default <p> tag */
   as?: T;
   className?: string;
-  color?: typeof TypographyColor[number];
+  color?: (typeof TypographyColor)[number];
   /**
    * | Variant | Size Class | Font Size | Font Weight |
    * | :------ | :--------- | :-------- | :---------- |
@@ -53,8 +53,8 @@ type TypographyProps<T extends React.ElementType> = {
    * | c1      | text-xs    | 12px      | 400         |
    * | c2      | -          | 11px      | 400         |
    */
-  variant: typeof TypographyVariant[number];
-  font?: typeof TypographyFont[number];
+  variant: (typeof TypographyVariant)[number];
+  font?: (typeof TypographyFont)[number];
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<T>;
 

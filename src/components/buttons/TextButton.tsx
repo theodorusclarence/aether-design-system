@@ -6,8 +6,8 @@ const TextButtonSize = ['sm', 'base'] as const;
 const TextButtonVariant = ['primary', 'secondary', 'basic', 'danger'] as const;
 
 type TextButtonProps = {
-  size?: typeof TextButtonSize[number];
-  variant?: typeof TextButtonVariant[number];
+  size?: (typeof TextButtonSize)[number];
+  variant?: (typeof TextButtonVariant)[number];
 } & React.ComponentPropsWithRef<'button'>;
 
 const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(

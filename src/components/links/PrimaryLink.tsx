@@ -10,8 +10,8 @@ const PrimaryLinkSize = ['sm', 'base'] as const;
 const PrimaryLinkVariant = ['primary', 'secondary', 'basic', 'danger'] as const;
 
 type PrimaryLinkProps = {
-  size?: typeof PrimaryLinkSize[number];
-  variant?: typeof PrimaryLinkVariant[number];
+  size?: (typeof PrimaryLinkSize)[number];
+  variant?: (typeof PrimaryLinkVariant)[number];
 } & UnstyledLinkProps;
 
 const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(

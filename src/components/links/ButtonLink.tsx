@@ -11,8 +11,8 @@ const ButtonLinkVariant = ['primary', 'secondary', 'outline', 'ghost'] as const;
 const ButtonLinkSize = ['sm', 'base', 'lg'] as const;
 
 type ButtonLinkProps = {
-  variant?: typeof ButtonLinkVariant[number];
-  size?: typeof ButtonLinkSize[number];
+  variant?: (typeof ButtonLinkVariant)[number];
+  size?: (typeof ButtonLinkSize)[number];
   leftIcon?: IconType;
   rightIcon?: IconType;
   leftIconClassName?: string;

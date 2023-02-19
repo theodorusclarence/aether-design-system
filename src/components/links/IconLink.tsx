@@ -17,8 +17,8 @@ const IconLinkVariant = [
 const IconLinkSize = ['sm', 'base', 'lg'] as const;
 
 type IconLinkProps = {
-  variant?: typeof IconLinkVariant[number];
-  size?: typeof IconLinkSize[number];
+  variant?: (typeof IconLinkVariant)[number];
+  size?: (typeof IconLinkSize)[number];
   icon?: IconType;
   iconClassName?: string;
 } & Omit<UnstyledLinkProps, 'children'>;

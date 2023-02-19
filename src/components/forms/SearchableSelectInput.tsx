@@ -178,11 +178,14 @@ export default function SearchableSelectInput({
                   isMulti
                     ? field.onChange(
                         (
-                          selectedOptions as MultiValue<typeof options[number]>
+                          selectedOptions as MultiValue<
+                            (typeof options)[number]
+                          >
                         ).map((option) => option?.value ?? '')
                       )
                     : field.onChange(
-                        (selectedOptions as typeof options[number])?.value ?? ''
+                        (selectedOptions as (typeof options)[number])?.value ??
+                          ''
                       );
                 }}
                 isDisabled={disabled}

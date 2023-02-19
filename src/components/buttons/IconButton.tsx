@@ -15,8 +15,8 @@ const IconButtonSize = ['sm', 'base', 'lg'] as const;
 
 type IconButtonProps = {
   isLoading?: boolean;
-  variant?: typeof IconButtonVariant[number];
-  size?: typeof IconButtonSize[number];
+  variant?: (typeof IconButtonVariant)[number];
+  size?: (typeof IconButtonSize)[number];
   icon?: IconType;
   iconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
