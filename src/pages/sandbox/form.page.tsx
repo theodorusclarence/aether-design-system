@@ -18,7 +18,7 @@ import Seo from '@/components/Seo';
 import Typography from '@/components/typography/Typography';
 
 /**
- * This is typed incorrectly, for the sake of sandbox purpose
+ * This is typed incorrectly for the sake of sandbox purpose
  * If you need a boilerplate for a new RHF page,
  * please take a reference for React Hook Form Layout on
  * @see /components/forms/boilerplate.tsx

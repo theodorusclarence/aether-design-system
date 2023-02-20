@@ -6,6 +6,8 @@ import Select, { components, MultiValue, StylesConfig } from 'react-select';
 
 import Typography from '@/components/typography/Typography';
 
+import { ExtractProps } from '@/types/helper';
+
 export type SearchableSelectInputProps = {
   label: string | null;
   id: string;
@@ -18,7 +20,8 @@ export type SearchableSelectInputProps = {
   validation?: RegisterOptions;
   options: { value: string; label: string }[];
   containerClassName?: string;
-} & React.ComponentPropsWithoutRef<'select'>;
+} & React.ComponentPropsWithoutRef<'select'> &
+  ExtractProps<Select>;
 
 export default function SearchableSelectInput({
   disabled,
@@ -32,6 +35,7 @@ export default function SearchableSelectInput({
   options,
   hideError = false,
   containerClassName,
+  ...rest
 }: SearchableSelectInputProps) {
   const {
     control,
@@ -208,6 +212,7 @@ export default function SearchableSelectInput({
                     </components.MultiValueRemove>
                   ),
                 }}
+                {...rest}
               />
             );
           }}

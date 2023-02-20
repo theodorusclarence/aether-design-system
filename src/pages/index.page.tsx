@@ -82,6 +82,10 @@ const sandbox = [
     route: '/sandbox/form',
   },
   {
+    title: 'Searchable Select Form',
+    route: '/sandbox/searchable-select-form',
+  },
+  {
     title: 'Text Link & Button',
     route: '/sandbox/text-button',
   },
