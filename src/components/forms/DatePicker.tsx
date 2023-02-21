@@ -12,7 +12,7 @@ import Typography from '@/components/typography/Typography';
 
 type DatePickerProps = {
   validation?: RegisterOptions;
-  label: string;
+  label: string | null;
   id: string;
   placeholder?: string;
   defaultYear?: number;
@@ -45,6 +45,7 @@ export default function DatePicker({
     control,
   } = useFormContext();
   const error = get(errors, id);
+  const withLabel = label !== null;
 
   // If there is a year default, then change the year to the props
   const defaultDate = new Date();
@@ -53,9 +54,11 @@ export default function DatePicker({
 
   return (
     <div className={clsxm('relative', containerClassName)}>
-      <Typography as='label' variant='s3' className='block' htmlFor={id}>
-        {label}
-      </Typography>
+      {withLabel && (
+        <Typography as='label' variant='s3' className='block' htmlFor={id}>
+          {label}
+        </Typography>
+      )}
 
       <Controller
         control={control}
@@ -64,7 +67,7 @@ export default function DatePicker({
         name={id}
         render={({ field: { onChange, onBlur, value } }) => (
           <>
-            <div className='relative mt-1'>
+            <div className={clsx('relative', withLabel && 'mt-1')}>
               <ReactDatePicker
                 name={id}
                 onChange={onChange}

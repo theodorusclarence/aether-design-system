@@ -17,7 +17,7 @@ export default function ErrorMessage({
 
   return (
     <p className={clsxm('text-sm text-red-500', className)} {...rest}>
-      {error.message?.toString()}
+      {error?.message?.toString()}
     </p>
   );
 }

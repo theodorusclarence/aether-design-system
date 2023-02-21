@@ -5,7 +5,7 @@ import { RegisterOptions, useFormContext } from 'react-hook-form';
 import Typography from '@/components/typography/Typography';
 
 export type TextAreaProps = {
-  label: string;
+  label: string | null;
   id: string;
   placeholder?: string;
   helperText?: string;
@@ -32,13 +32,16 @@ export default function TextArea({
     formState: { errors },
   } = useFormContext();
   const error = get(errors, id);
+  const withLabel = label !== null;
 
   return (
     <div className={containerClassName}>
-      <Typography as='label' variant='s3' className='block' htmlFor={id}>
-        {label}
-      </Typography>
-      <div className='relative mt-1'>
+      {withLabel && (
+        <Typography as='label' variant='s3' className='block' htmlFor={id}>
+          {label}
+        </Typography>
+      )}
+      <div className={clsx('relative', withLabel && 'mt-1')}>
         <textarea
           {...register(id, validation)}
           rows={3}

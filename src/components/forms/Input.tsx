@@ -54,8 +54,8 @@ export default function Input({
     formState: { errors },
   } = useFormContext();
   const error = get(errors, id);
-
   const withLabel = label !== null;
+
   return (
     <div className={containerClassName}>
       {withLabel && (

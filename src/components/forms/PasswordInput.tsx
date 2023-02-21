@@ -8,7 +8,7 @@ import Typography from '@/components/typography/Typography';
 
 export type PasswordInputProps = {
   /** Input label */
-  label: string;
+  label: string | null;
   /**
    * id to be initialized with React Hook Form,
    * must be the same with the pre-defined types.
@@ -50,16 +50,19 @@ export default function PasswordInput({
   } = useFormContext();
 
   const error = get(errors, id);
+  const withLabel = label !== null;
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePassword = () => setShowPassword((prev) => !prev);
 
   return (
     <div className={containerClassName}>
-      <Typography as='label' variant='s3' className='block' htmlFor={id}>
-        {label}
-      </Typography>
-      <div className='relative mt-1'>
+      {withLabel && (
+        <Typography as='label' variant='s3' className='block' htmlFor={id}>
+          {label}
+        </Typography>
+      )}
+      <div className={clsx('relative', withLabel && 'mt-1')}>
         <input
           {...register(id, validation)}
           {...rest}

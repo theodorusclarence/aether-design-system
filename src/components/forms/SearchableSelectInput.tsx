@@ -151,7 +151,8 @@ export default function SearchableSelectInput({
       )}
       <div
         className={clsx(
-          'relative mt-1',
+          'relative',
+          withLabel && 'mt-1',
           (disabled || readOnly) && 'cursor-not-allowed'
         )}
       >
