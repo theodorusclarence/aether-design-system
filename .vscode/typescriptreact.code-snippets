@@ -176,11 +176,11 @@
   },
   "Wrap with clsx": {
     "prefix": "cx",
-    "body": ["{clsx(${TM_SELECTED_TEXT}$0)}"]
+    "body": ["{clsx([${TM_SELECTED_TEXT}$0])}"]
   },
   "Wrap with clsxm": {
     "prefix": "cxm",
-    "body": ["{clsxm(${TM_SELECTED_TEXT}$0, className)}"]
+    "body": ["{clsxm([${TM_SELECTED_TEXT}$0, className])}"]
   },
   //#endregion  //*======== Snippet Wrap ===========
 
