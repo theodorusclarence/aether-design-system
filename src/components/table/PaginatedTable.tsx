@@ -49,6 +49,10 @@ export default function PaginatedTable<T extends object>({
         pageSize,
       },
     },
+    defaultColumn: {
+      minSize: 0,
+      size: 0,
+    },
     state: {
       globalFilter,
       sorting,
@@ -98,15 +102,6 @@ export default function PaginatedTable<T extends object>({
         <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
           <div className='overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg'>
             <table className='min-w-full divide-y divide-gray-300'>
-              <colgroup>
-                {columns.map((column) => (
-                  <col
-                    key={column.id}
-                    span={1}
-                    style={{ width: column.size ? column.size : 'auto' }}
-                  />
-                ))}
-              </colgroup>
               <THead table={table} omitSort={omitSort} />
               <TBody table={table} />
             </table>

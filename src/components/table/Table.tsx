@@ -39,6 +39,10 @@ export default function Table<T extends object>({
       globalFilter,
       sorting,
     },
+    defaultColumn: {
+      minSize: 0,
+      size: 0,
+    },
     onGlobalFilterChange: setGlobalFilter,
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),

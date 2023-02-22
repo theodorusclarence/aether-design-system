@@ -60,6 +60,10 @@ export default function ServerTable<T extends object>({
     state: {
       ...tableState,
     },
+    defaultColumn: {
+      minSize: 0,
+      size: 0,
+    },
     onGlobalFilterChange: setTableState.setGlobalFilter,
     onPaginationChange: setTableState.setPagination,
     onSortingChange: setTableState.setSorting,
@@ -91,21 +95,8 @@ export default function ServerTable<T extends object>({
       </div>
       <div className='-my-2 -mx-4 mt-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
         <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
-          <div className='shadow-4px overflow-hidden md:rounded-lg'>
-            <table className='min-w-full'>
-              <colgroup>
-                {table.getAllColumns().map((column) => (
-                  <col
-                    key={column.id}
-                    span={1}
-                    style={{
-                      width: column.columnDef.size
-                        ? column.columnDef.size / 100 + '%'
-                        : 'auto',
-                    }}
-                  />
-                ))}
-              </colgroup>
+          <div className='overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg'>
+            <table className='min-w-full divide-y divide-gray-300'>
               <THead table={table} omitSort={omitSort} />
               <TBody table={table} />
             </table>

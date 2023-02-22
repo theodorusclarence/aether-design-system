@@ -13,6 +13,7 @@ import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import PaginatedTable from '@/components/table/PaginatedTable';
 import ServerTable from '@/components/table/ServerTable';
+import Table from '@/components/table/Table';
 import Typography from '@/components/typography/Typography';
 
 import { User } from '@/pages/api/mock/users.api';
@@ -26,10 +27,18 @@ export default function TablePage() {
   //#region  //*=========== Table Definition ===========
   const { tableState, setTableState } = useServerTable<User>();
 
+  /**
+   * Behavior:
+   * - If no size set, text won't truncate and will take as much space as the content needs
+   *      creating an overflow if needed
+   * - If size is set, it will be truncated to the pixel specified
+   */
   const columns: ColumnDef<User>[] = [
     {
       accessorKey: 'name',
       header: 'Role',
+      // To set size, add size in pixel
+      size: 200,
     },
     {
       accessorKey: 'email',
@@ -120,6 +129,19 @@ export default function TablePage() {
             <PaginatedTable
               columns={columns}
               data={unpaginatedData?.data ?? []}
+              withFilter
+            />
+
+            <Typography as='h2' variant='h2' className='mt-8'>
+              Table
+            </Typography>
+            <Typography variant='b2'>
+              Server returned all the data then paginated on the client.
+            </Typography>
+
+            <Table
+              columns={columns}
+              data={unpaginatedData?.data.slice(0, 20) ?? []}
               withFilter
             />
           </div>

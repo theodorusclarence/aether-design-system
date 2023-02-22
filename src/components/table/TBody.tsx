@@ -1,4 +1,5 @@
 import { flexRender, RowData, Table } from '@tanstack/react-table';
+import clsx from 'clsx';
 import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
@@ -30,9 +31,22 @@ export default function TBody<T extends RowData>({
               as='td'
               variant='b2'
               color='secondary'
-              className='truncate whitespace-nowrap py-4 pl-[30px] pr-3'
+              className={clsx([
+                'whitespace-nowrap',
+                'truncate',
+                'py-4 pl-[34px] pr-3',
+              ])}
               title={cell.getValue() as string}
-              style={{ maxWidth: cell.column.getSize() }}
+              style={{
+                width:
+                  cell.column.getSize() !== 0
+                    ? cell.column.getSize()
+                    : undefined,
+                maxWidth:
+                  cell.column.getSize() !== 0
+                    ? cell.column.getSize()
+                    : undefined,
+              }}
             >
               {flexRender(cell.column.columnDef.cell, cell.getContext())}
             </Typography>
