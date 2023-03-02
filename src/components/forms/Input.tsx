@@ -69,7 +69,7 @@ export default function Input({
             {typeof LeftIcon === 'string' ? (
               <Typography variant='s4'>{LeftIcon}</Typography>
             ) : (
-              <LeftIcon className='text-xl text-typo' />
+              <LeftIcon size='1em' className='text-xl text-typo' />
             )}
           </div>
         )}

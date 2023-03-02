@@ -123,7 +123,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
             <ImSpinner2 className='animate-spin' />
           </div>
         )}
-        {Icon && <Icon className={clsxm(iconClassName)} />}
+        {Icon && <Icon size='1em' className={clsxm(iconClassName)} />}
       </button>
     );
   }

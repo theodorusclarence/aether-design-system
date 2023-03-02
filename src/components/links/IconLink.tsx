@@ -103,7 +103,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
         )}
         {...rest}
       >
-        {Icon && <Icon className={clsxm(iconClassName)} />}
+        {Icon && <Icon size='1em' className={clsxm(iconClassName)} />}
       </UnstyledLink>
     );
   }

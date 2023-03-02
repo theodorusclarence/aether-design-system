@@ -136,7 +136,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               size === 'sm' && 'mr-1',
             ])}
           >
-            <LeftIcon className={clsxm('text-base', leftIconClassName)} />
+            <LeftIcon
+              size='1em'
+              className={clsxm('text-base', leftIconClassName)}
+            />
           </div>
         )}
         {children}
@@ -148,7 +151,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               size === 'sm' && 'ml-1',
             ])}
           >
-            <RightIcon className={clsxm('text-base', rightIconClassName)} />
+            <RightIcon
+              size='1em'
+              className={clsxm('text-base', rightIconClassName)}
+            />
           </div>
         )}
       </button>
