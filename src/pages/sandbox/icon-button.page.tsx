@@ -72,6 +72,7 @@ export default function IconButtonPage() {
                   <IconButton variant='primary' size='lg' icon={FiPlus} />
                   <IconButton variant='primary' icon={FiEye} />
                   <IconButton variant='primary' size='sm' icon={FiEdit2} />
+                  <IconButton variant='primary' size='xs' icon={FiPlus} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
                   <IconButton
@@ -87,6 +88,12 @@ export default function IconButtonPage() {
                     size='sm'
                     icon={FiEdit2}
                   />
+                  <IconButton
+                    variant='primary'
+                    disabled
+                    size='xs'
+                    icon={FiPlus}
+                  />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
                   <IconButton
@@ -101,6 +108,12 @@ export default function IconButtonPage() {
                     isLoading
                     size='sm'
                     icon={FiEdit2}
+                  />
+                  <IconButton
+                    variant='primary'
+                    isLoading
+                    size='xs'
+                    icon={FiPlus}
                   />
                 </div>
               </div>
@@ -288,6 +301,7 @@ export default function IconButtonPage() {
                   href='/'
                   icon={FiArrowLeft}
                 />
+                <IconLink variant='outline' size='xs' href='/' icon={FiPlus} />
                 <IconLink variant='secondary' size='lg' href='/' icon={FiEye} />
                 <IconLink variant='danger' href='/' icon={FiTrash2} />
               </div>

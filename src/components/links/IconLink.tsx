@@ -14,7 +14,7 @@ const IconLinkVariant = [
   'outline',
   'ghost',
 ] as const;
-const IconLinkSize = ['sm', 'base', 'lg'] as const;
+const IconLinkSize = ['xs', 'sm', 'base', 'lg'] as const;
 
 type IconLinkProps = {
   variant?: (typeof IconLinkVariant)[number];
@@ -58,6 +58,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
               'min-h-[1.75rem] min-w-[1.75rem] md:min-h-[2rem] md:min-w-[2rem]',
               'text-xs md:text-sm',
             ],
+            size === 'xs' && ['p-1', 'text-xs md:text-sm'],
           ],
           //#region  //*=========== Variants ===========
           //#region  //*=========== Variants ===========

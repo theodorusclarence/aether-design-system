@@ -11,7 +11,7 @@ const IconButtonVariant = [
   'outline',
   'ghost',
 ] as const;
-const IconButtonSize = ['sm', 'base', 'lg'] as const;
+const IconButtonSize = ['xs', 'sm', 'base', 'lg'] as const;
 
 type IconButtonProps = {
   isLoading?: boolean;
@@ -61,6 +61,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
               'min-h-[1.75rem] min-w-[1.75rem] md:min-h-[2rem] md:min-w-[2rem]',
               'text-xs md:text-sm',
             ],
+            size === 'xs' && ['p-1', 'text-xs md:text-sm'],
           ],
           //#region  //*=========== Variants ===========
           //#region  //*=========== Variants ===========
