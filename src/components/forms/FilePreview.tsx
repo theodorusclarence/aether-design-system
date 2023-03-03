@@ -6,9 +6,9 @@ import {
   HiOutlinePhotograph,
   HiX,
 } from 'react-icons/hi';
-import Lightbox from 'react-image-lightbox';
+import Lightbox from 'react-image-lightbox-rotation';
 
-import 'react-image-lightbox/style.css';
+import 'react-image-lightbox-rotation/style.css';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 
@@ -87,6 +87,7 @@ export default function FilePreview({
           mainSrc={images[index]}
           nextSrc={images[(index + 1) % images.length]}
           prevSrc={images[(index + images.length - 1) % images.length]}
+          rotate={0}
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
             setIndex(

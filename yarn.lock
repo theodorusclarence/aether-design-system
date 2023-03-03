@@ -6027,10 +6027,10 @@ react-icons@^4.7.1:
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
   integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
 
-react-image-lightbox@^5.1.4:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.4.tgz#5b847dcb79e9efdf9d7cd5621a92e0f156d2cf30"
-  integrity sha512-kTiAODz091bgT7SlWNHab0LSMZAPJtlNWDGKv7pLlLY1krmf7FuG1zxE0wyPpeA8gPdwfr3cu6sPwZRqWsc3Eg==
+react-image-lightbox-rotation@^5.1.4-rotate:
+  version "5.1.4-rotate"
+  resolved "https://registry.yarnpkg.com/react-image-lightbox-rotation/-/react-image-lightbox-rotation-5.1.4-rotate.tgz#16db9929a7a02aa74ff5e41d6610afc48ffcfd85"
+  integrity sha512-XK+TiOIec907UrrKwA4kBSxDRsuixA6KFQ8zosv1oyYmAH1DgDSwUHxVO2oDqFmUIbn3uQY6TvS0lILkSk6B4g==
   dependencies:
     prop-types "^15.7.2"
     react-modal "^3.11.1"

@@ -40,7 +40,7 @@
     "react-hook-form": "^7.43.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
-    "react-image-lightbox": "^5.1.4",
+    "react-image-lightbox-rotation": "^5.1.4-rotate",
     "react-select": "^5.7.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
