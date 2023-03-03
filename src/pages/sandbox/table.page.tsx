@@ -67,13 +67,12 @@ export default function TablePage() {
     },
   });
 
-  const { data: queryData } = useQuery<PaginatedApiResponse<User[]>, Error>(
-    [url],
-    mockQuery,
-    {
-      keepPreviousData: true,
-    }
-  );
+  const { data: queryData, isLoading } = useQuery<
+    PaginatedApiResponse<User[]>,
+    Error
+  >([url], mockQuery, {
+    keepPreviousData: true,
+  });
 
   const { data: unpaginatedData } = useQuery<ApiResponse<User[]>, Error>(
     ['/users'],
@@ -113,6 +112,7 @@ export default function TablePage() {
               header={
                 <CountryFilterPopup setCountryFilter={setCountryFilter} />
               }
+              isLoading={isLoading}
               tableState={tableState}
               setTableState={setTableState}
               className='mt-8'

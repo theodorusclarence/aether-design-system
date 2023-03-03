@@ -51,15 +51,19 @@ export default function getUsers(req: NextApiRequest, res: NextApiResponse) {
         ? data.slice((pageNumber - 1) * pageSize, pageNumber * pageSize)
         : data;
 
-    res.status(200).json({
-      code: 200,
-      status: 'OK',
-      data,
-      meta: {
-        last_page: lastPage,
-        total: data.length,
-      },
-    });
+    return setTimeout(
+      () =>
+        res.status(200).json({
+          code: 200,
+          status: 'OK',
+          data,
+          meta: {
+            last_page: lastPage,
+            total: data.length,
+          },
+        }),
+      1000
+    );
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });
   }

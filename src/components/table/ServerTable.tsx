@@ -35,6 +35,7 @@ type ServerTableProps<T extends object> = {
   columns: ColumnDef<T>[];
   data: T[];
   header?: React.ReactNode;
+  isLoading: boolean;
   meta: PaginatedApiResponse<T>['meta'] | undefined;
   tableState: ServerTableState;
   setTableState: SetServerTableState;
@@ -47,6 +48,7 @@ export default function ServerTable<T extends object>({
   columns,
   data,
   header: Header,
+  isLoading,
   meta,
   tableState,
   setTableState,
@@ -75,6 +77,7 @@ export default function ServerTable<T extends object>({
 
   return (
     <div className={clsxm('flex flex-col', className)} {...rest}>
+      <pre>{JSON.stringify({ isLoading }, null, 2)}</pre>
       <div
         className={clsx(
           'flex flex-col items-stretch gap-3 sm:flex-row',
@@ -104,7 +107,7 @@ export default function ServerTable<T extends object>({
           <div className='overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg'>
             <table className='min-w-full divide-y divide-gray-300'>
               <THead table={table} omitSort={omitSort} />
-              <TBody table={table} />
+              <TBody table={table} isLoading={isLoading} />
             </table>
           </div>
         </div>
