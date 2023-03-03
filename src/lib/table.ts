@@ -7,7 +7,7 @@ type BuildPaginationTableParam = {
   baseUrl: string;
   tableState: ServerTableState;
   /** Parameter addition
-   * @example ['include=user,officer']
+   * @example include: ['user', 'officer']
    */
   additionalParam?: Record<string, unknown>;
   options?: StringifyOptions;
@@ -19,27 +19,27 @@ export const buildPaginatedTableURL: BuildPaginationTableURL = ({
   tableState,
   additionalParam,
   options,
-}) => {
-  const queryParams = queryString.stringify(
+}) =>
+  queryString.stringifyUrl(
     {
-      page_size: tableState.pagination.pageSize,
-      page: tableState.pagination.pageIndex + 1,
-      sort: tableState.sorting.length > 0 ? tableState.sorting[0].id : '',
-      type:
-        tableState.sorting.length > 0
-          ? tableState.sorting[0].desc
-            ? 'desc'
-            : 'asc'
-          : '',
-      keyword: tableState.globalFilter,
-      ...additionalParam,
+      url: baseUrl,
+      query: {
+        page_size: tableState.pagination.pageSize,
+        page: tableState.pagination.pageIndex + 1,
+        sort: tableState.sorting.length > 0 ? tableState.sorting[0].id : '',
+        type:
+          tableState.sorting.length > 0
+            ? tableState.sorting[0].desc
+              ? 'desc'
+              : 'asc'
+            : '',
+        keyword: tableState.globalFilter,
+        ...additionalParam,
+      },
     },
     {
-      arrayFormat: 'bracket',
+      arrayFormat: 'comma',
       skipEmptyString: true,
       ...options,
     }
   );
-
-  return `${baseUrl}?${queryParams}`;
-};
