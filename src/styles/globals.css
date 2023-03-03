@@ -219,3 +219,26 @@
   border-radius: 0.5rem;
 }
 /* #endregion  /**======== DropzoneInput Border =========== */
+
+/* #region  /**=========== Scrollbar =========== */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7b7b7b;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #7b7b7b #f7f7f7;
+}
+/* #endregion  /**======== Scrollbar =========== */
