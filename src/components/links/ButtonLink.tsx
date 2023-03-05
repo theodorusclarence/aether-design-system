@@ -46,15 +46,15 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           //#region  //*=========== Size ===========
           [
             size === 'lg' && [
-              'min-h-[3rem] px-4 md:min-h-[2.75rem]',
+              'min-h-[3rem] px-3.5 md:min-h-[2.75rem]',
               'text-base',
             ],
             size === 'base' && [
-              'min-h-[2.25rem] px-4 md:min-h-[2.5rem]',
+              'min-h-[2.25rem] px-3 md:min-h-[2.5rem]',
               'text-sm md:text-base',
             ],
             size === 'sm' && [
-              'min-h-[1.75rem] px-3 md:min-h-[2rem]',
+              'min-h-[1.75rem] px-2 md:min-h-[2rem]',
               'text-xs md:text-sm',
             ],
           ],
