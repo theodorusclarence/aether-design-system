@@ -18,7 +18,7 @@ type ModalProps = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   title: React.ReactNode;
   titleClassName?: string;
-} & Omit<ExtractProps<typeof Dialog>, 'onClose'>;
+} & Omit<ExtractProps<typeof Dialog>, 'onClose' | 'unmount'>;
 
 export function ModalRoot({
   className,
