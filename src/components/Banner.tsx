@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import * as React from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Slider, { CustomArrowProps, Settings } from 'react-slick';
@@ -6,6 +5,7 @@ import Slider, { CustomArrowProps, Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import clsxm from '@/lib/clsxm';
 import { BANNER_CONTENT } from '@/lib/content/banner';
 
 import IconButton from '@/components/buttons/IconButton';
@@ -53,11 +53,11 @@ export default function Banner({ className, ...rest }: BannerProps) {
 
   return (
     <div
-      className={clsx([
+      className={clsxm(
         'flex items-center bg-primary-100 py-3',
         'min-h-[4rem]',
-        className,
-      ])}
+        className
+      )}
       {...rest}
     >
       <div className='sm:layout max-w-full px-8 sm:px-0'>
