@@ -43,6 +43,7 @@
     "react-image-lightbox-rotation": "^5.1.4-rotate",
     "react-select": "^5.7.0",
     "react-slick": "^0.29.0",
+    "react-wrap-balancer": "^0.4.0",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^1.10.0",
     "tailwindcss-animate": "^1.0.5",
