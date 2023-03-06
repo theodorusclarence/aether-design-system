@@ -205,6 +205,7 @@
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
   @apply !bg-primary-500;
+  @apply !text-white;
 }
 /* #endregion  /**======== Datepicker =========== */
 
