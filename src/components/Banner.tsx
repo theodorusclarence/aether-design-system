@@ -20,7 +20,7 @@ function NextArrow({ onClick }: CustomArrowProps) {
       icon={FiChevronRight}
       variant='ghost'
       size='sm'
-      className='absolute top-1/2 right-0 z-10 flex translate-x-full -translate-y-1/2 items-center rounded-full '
+      className='absolute top-1/2 right-0 z-10 flex translate-x-full -translate-y-1/2 items-center rounded-full'
     />
   );
 }
@@ -39,6 +39,7 @@ function PrevArrow({ onClick }: CustomArrowProps) {
 
 const settings: Settings = {
   autoplay: true,
+  autoplaySpeed: 6000,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -50,7 +51,11 @@ const settings: Settings = {
 export default function Banner({ className, ...rest }: BannerProps) {
   return (
     <div
-      className={clsx('flex items-center bg-primary-100 py-3', className)}
+      className={clsx([
+        'flex items-center bg-primary-100 py-3',
+        'min-h-[4rem]',
+        className,
+      ])}
       {...rest}
     >
       <div className='sm:layout max-w-full px-8 sm:px-0'>
