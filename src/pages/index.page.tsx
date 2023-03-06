@@ -133,5 +133,17 @@ const sandbox = [
     title: 'Banner',
     route: '/sandbox/banner',
   },
+  {
+    title: 'Dashboard Layout',
+    route: '/sandbox/dashboard-layout',
+  },
+  {
+    title: 'Page Header',
+    route: '/sandbox/page-header',
+  },
+  {
+    title: 'Card',
+    route: '/sandbox/card',
+  },
 ];
 //#endregion  //*======== Sandbox ===========
