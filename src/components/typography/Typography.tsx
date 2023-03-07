@@ -24,7 +24,13 @@ const TypographyVariant = [
   'l2',
 ] as const;
 
-const TypographyColor = ['primary', 'secondary', 'tertiary', 'danger'] as const;
+const TypographyColor = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'danger',
+  'white',
+] as const;
 const TypographyFont = ['averta', 'inter'] as const;
 
 type TypographyProps<T extends React.ElementType> = {
@@ -108,6 +114,7 @@ const Typography: TypographyComponent = React.forwardRef(
             color === 'secondary' && ['text-gray-700'],
             color === 'tertiary' && ['text-gray-500'],
             color === 'danger' && ['text-red-500'],
+            color === 'white' && ['text-white'],
           ],
           //#endregion  //*======== Color ===========
           //#region  //*=========== Font ===========
