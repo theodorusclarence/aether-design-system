@@ -12,14 +12,18 @@ import IconButton from '@/components/buttons/IconButton';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 import PaginatedTable from '@/components/table/PaginatedTable';
+import PopupFilter, { PopupFilterProps } from '@/components/table/PopupFilter';
 import ServerTable from '@/components/table/ServerTable';
 import Table from '@/components/table/Table';
 import Typography from '@/components/typography/Typography';
 
 import { User } from '@/pages/api/mock/users.api';
-import CountryFilterPopup from '@/pages/sandbox/components/CountryFilterPopup';
 
 import { ApiResponse, PaginatedApiResponse } from '@/types/api';
+
+type UserFilter = {
+  country: string[];
+};
 
 export default function TablePage() {
   const renderCount = useRenderCount();
@@ -57,13 +61,31 @@ export default function TablePage() {
   //#endregion  //*======== Table Definition ===========
 
   //#region  //*=========== Fetch Data ===========
-  const [countryFilter, setCountryFilter] = React.useState<string[]>([]);
+  const [filterQuery, setFilterQuery] = React.useState<UserFilter>({
+    country: [],
+  });
+
+  const filterOption: PopupFilterProps<UserFilter>['filterOption'] =
+    React.useMemo(
+      () => [
+        {
+          id: 'country',
+          name: 'Country',
+          options: [
+            { id: 'Indonesia', name: 'Indonesia' },
+            { id: 'Malaysia', name: 'Malaysia' },
+            { id: 'Singapore', name: 'Singapore' },
+          ],
+        },
+      ],
+      []
+    );
 
   const url = buildPaginatedTableURL({
     baseUrl: '/users',
     tableState,
     additionalParam: {
-      country: countryFilter,
+      country: filterQuery.country,
     },
   });
 
@@ -102,7 +124,11 @@ export default function TablePage() {
               server.
             </Typography>
             <pre>
-              {JSON.stringify({ renderCount, tableState, url }, null, 2)}
+              {JSON.stringify(
+                { renderCount, tableState, url, filterQuery },
+                null,
+                2
+              )}
             </pre>
 
             <ServerTable
@@ -110,7 +136,10 @@ export default function TablePage() {
               data={queryData?.data ?? []}
               meta={queryData?.meta}
               header={
-                <CountryFilterPopup setCountryFilter={setCountryFilter} />
+                <PopupFilter
+                  filterOption={filterOption}
+                  setFilterQuery={setFilterQuery}
+                />
               }
               isLoading={isLoading}
               tableState={tableState}

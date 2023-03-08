@@ -23,7 +23,7 @@ export default function getUsers(req: NextApiRequest, res: NextApiResponse) {
     const sort = req.query.sort as keyof User;
     const type = req.query.type as 'asc' | 'desc';
     const keyword = req.query.keyword as string;
-    const country = req.query['country[]'] as string[];
+    const country = req.query.country as string[];
 
     let data: User[];
 
