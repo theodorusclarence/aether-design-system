@@ -10,6 +10,7 @@ const ButtonVariant = [
   'danger',
   'outline',
   'ghost',
+  'warning',
 ] as const;
 const ButtonSize = ['sm', 'base', 'lg'] as const;
 
@@ -94,6 +95,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               'disabled:bg-red-700',
               'focus-visible:ring-red-400',
             ],
+            variant === 'warning' && [
+              'bg-amber-500 text-white',
+              'border border-amber-500',
+              'hover:bg-amber-600 hover:text-white',
+              'active:bg-amber-700',
+              'disabled:bg-amber-700',
+              'focus-visible:ring-amber-400',
+            ],
             variant === 'outline' && [
               'text-typo',
               'border border-gray-300',
@@ -118,9 +127,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             className={clsxm(
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               {
-                'text-white': ['primary', 'secondary', 'danger'].includes(
-                  variant
-                ),
+                'text-white': [
+                  'primary',
+                  'secondary',
+                  'danger',
+                  'warning',
+                ].includes(variant),
                 'text-primary-500': ['outline', 'ghost'].includes(variant),
               }
             )}

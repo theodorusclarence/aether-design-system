@@ -7,7 +7,13 @@ import UnstyledLink, {
   UnstyledLinkProps,
 } from '@/components/links/UnstyledLink';
 
-const ButtonLinkVariant = ['primary', 'secondary', 'outline', 'ghost'] as const;
+const ButtonLinkVariant = [
+  'primary',
+  'secondary',
+  'outline',
+  'ghost',
+  'warning',
+] as const;
 const ButtonLinkSize = ['sm', 'base', 'lg'] as const;
 
 type ButtonLinkProps = {
@@ -76,6 +82,14 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
               'active:bg-secondary-700',
               'disabled:bg-secondary-700',
               'focus-visible:ring-secondary-400',
+            ],
+            variant === 'warning' && [
+              'bg-amber-500 text-white',
+              'border border-amber-500',
+              'hover:bg-amber-600 hover:text-white',
+              'active:bg-amber-700',
+              'disabled:bg-amber-700',
+              'focus-visible:ring-amber-400',
             ],
             variant === 'outline' && [
               'text-typo',

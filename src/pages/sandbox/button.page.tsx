@@ -415,6 +415,93 @@ export default function ButtonPage() {
 
             <div className='mt-8'>
               <Typography as='h2' variant='h2'>
+                Warning
+              </Typography>
+              <div className='mt-3 flex flex-wrap items-end gap-3'>
+                <Button
+                  variant='warning'
+                  size='lg'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                >
+                  Warning Button
+                </Button>
+                <Button
+                  variant='warning'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                >
+                  Warning Button
+                </Button>
+                <Button
+                  variant='warning'
+                  size='sm'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                >
+                  Warning Button
+                </Button>
+              </div>
+              <div className='mt-3 flex flex-wrap items-end gap-3'>
+                <Button
+                  variant='warning'
+                  size='lg'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                  disabled
+                >
+                  Warning Disabled
+                </Button>
+                <Button
+                  variant='warning'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                  disabled
+                >
+                  Warning Disabled
+                </Button>
+                <Button
+                  variant='warning'
+                  size='sm'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                  disabled
+                >
+                  Warning Disabled
+                </Button>
+              </div>
+              <div className='mt-3 flex flex-wrap items-end gap-3'>
+                <Button
+                  variant='warning'
+                  size='lg'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                  isLoading
+                >
+                  Warning Disabled
+                </Button>
+                <Button
+                  variant='warning'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                  isLoading
+                >
+                  Warning Disabled
+                </Button>
+                <Button
+                  variant='warning'
+                  size='sm'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                  isLoading
+                >
+                  Warning Disabled
+                </Button>
+              </div>
+            </div>
+
+            <div className='mt-8'>
+              <Typography as='h2' variant='h2'>
                 Ghost
               </Typography>
               <div className='mt-3 flex flex-wrap items-end gap-3'>
@@ -560,6 +647,34 @@ export default function ButtonPage() {
                   rightIcon={FiArrowRight}
                 >
                   Outline Button Link
+                </ButtonLink>
+              </div>
+              <div className='mt-3 flex flex-wrap items-end gap-3'>
+                <ButtonLink
+                  href='/'
+                  variant='warning'
+                  size='lg'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                >
+                  Warning Button Link
+                </ButtonLink>
+                <ButtonLink
+                  href='/'
+                  variant='warning'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                >
+                  Warning Button Link
+                </ButtonLink>
+                <ButtonLink
+                  href='/'
+                  variant='warning'
+                  size='sm'
+                  leftIcon={FiPlus}
+                  rightIcon={FiArrowRight}
+                >
+                  Warning Button Link
                 </ButtonLink>
               </div>
               <div className='mt-3 flex flex-wrap items-end gap-3'>

@@ -13,6 +13,7 @@ const IconLinkVariant = [
   'danger',
   'outline',
   'ghost',
+  'warning',
 ] as const;
 const IconLinkSize = ['xs', 'sm', 'base', 'lg'] as const;
 
@@ -86,6 +87,14 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
               'active:bg-red-700',
               'disabled:bg-red-700',
               'focus-visible:ring-red-400',
+            ],
+            variant === 'warning' && [
+              'bg-amber-500 text-white',
+              'border border-amber-500',
+              'hover:bg-amber-600 hover:text-white',
+              'active:bg-amber-700',
+              'disabled:bg-amber-700',
+              'focus-visible:ring-amber-400',
             ],
             variant === 'outline' && [
               'text-typo',

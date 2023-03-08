@@ -243,6 +243,47 @@ export default function IconButtonPage() {
 
               <div>
                 <Typography as='h2' variant='h2'>
+                  Warning
+                </Typography>
+                <div className='mt-3 flex flex-wrap items-end gap-3'>
+                  <IconButton variant='warning' size='lg' icon={FiPlus} />
+                  <IconButton variant='warning' icon={FiEye} />
+                  <IconButton variant='warning' size='sm' icon={FiEdit2} />
+                </div>
+                <div className='mt-3 flex flex-wrap items-end gap-3'>
+                  <IconButton
+                    variant='warning'
+                    disabled
+                    size='lg'
+                    icon={FiPlus}
+                  />
+                  <IconButton variant='warning' disabled icon={FiEye} />
+                  <IconButton
+                    variant='warning'
+                    disabled
+                    size='sm'
+                    icon={FiEdit2}
+                  />
+                </div>
+                <div className='mt-3 flex flex-wrap items-end gap-3'>
+                  <IconButton
+                    variant='warning'
+                    isLoading
+                    size='lg'
+                    icon={FiPlus}
+                  />
+                  <IconButton variant='warning' isLoading icon={FiEye} />
+                  <IconButton
+                    variant='warning'
+                    isLoading
+                    size='sm'
+                    icon={FiEdit2}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Typography as='h2' variant='h2'>
                   Ghost
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
