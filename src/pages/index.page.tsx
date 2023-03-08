@@ -138,6 +138,10 @@ const sandbox = [
     route: '/sandbox/alert',
   },
   {
+    title: 'Tag',
+    route: '/sandbox/tag',
+  },
+  {
     title: 'Card',
     route: '/sandbox/card',
   },
