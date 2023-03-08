@@ -49,6 +49,8 @@ const settings: Settings = {
 };
 
 export default function Banner({ className, ...rest }: BannerProps) {
+  if (!BANNER_CONTENT.length) return null;
+
   return (
     <div
       className={clsx([
