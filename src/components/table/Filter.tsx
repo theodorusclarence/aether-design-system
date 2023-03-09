@@ -43,13 +43,13 @@ export default function Filter<T extends RowData>({
         }}
         className={clsx(
           'flex w-full rounded-lg shadow-sm',
-          'min-h-[2.25rem] py-0 pl-9 md:min-h-[2.5rem]',
+          'min-h-[2.25rem] py-0 px-9 md:min-h-[2.5rem]',
           'border-gray-300 focus:border-primary-500 focus:ring-primary-500'
         )}
         placeholder='Search...'
       />
       {table.getState().globalFilter !== '' && (
-        <div className='absolute inset-y-0 right-0 flex items-center pr-3'>
+        <div className='absolute inset-y-0 right-0 flex items-center pr-2'>
           <button type='button' onClick={handleClearFilter} className='p-1'>
             <FiXCircle className='text-xl text-typo-icons' />
           </button>
