@@ -13,9 +13,6 @@ export default function MacCardPage() {
       <main>
         <section className=''>
           <div className='layout min-h-screen py-20'>
-            <MacCard>
-              <Typography variant='b2'>Hello</Typography>
-            </MacCard>
             <MacCard className='mt-8'>
               <div className='flex flex-col gap-2'>
                 <div className='rounded-lg bg-white p-3'>
@@ -31,6 +28,19 @@ export default function MacCardPage() {
                 </div>
               </div>
             </MacCard>
+
+            <MacCard>
+              <Typography variant='b2'>Hello</Typography>
+            </MacCard>
+
+            <div className='mt-4 bg-light p-4'>
+              <Typography as='h2' variant='h2'>
+                Light Mode
+              </Typography>
+              <MacCard mode='light' className='mt-3'>
+                <Typography variant='b2'>Hello</Typography>
+              </MacCard>
+            </div>
           </div>
         </section>
       </main>
