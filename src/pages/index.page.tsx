@@ -138,6 +138,10 @@ const sandbox = [
     route: '/sandbox/alert',
   },
   {
+    title: 'Typography Alert',
+    route: '/sandbox/typography-alert',
+  },
+  {
     title: 'Tag',
     route: '/sandbox/tag',
   },
