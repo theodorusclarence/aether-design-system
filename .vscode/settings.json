@@ -5,6 +5,17 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "headwind.runOnSave": false,
+  // Tailwind CSS Autocomplete, add more if used in projects
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "leftIconClassName",
+    "rightIconClassName",
+    "iconClassName",
+    "containerClassName",
+    "imgClassName",
+    "blurClassName",
+    "childrenClassName"
+  ],
   "typescript.preferences.importModuleSpecifier": "non-relative"
 }
