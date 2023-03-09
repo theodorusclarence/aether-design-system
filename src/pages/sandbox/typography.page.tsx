@@ -81,6 +81,15 @@ export default function TypographyPage() {
                 Tertiary
               </Typography>
             </div>
+
+            <div className='mt-8'>
+              <Typography
+                // No need to assign variant, use the class
+                className='h3 sm:h2 md:h1 lg:j1'
+              >
+                Responsive
+              </Typography>
+            </div>
           </div>
         </section>
       </main>

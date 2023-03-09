@@ -59,7 +59,7 @@ type TypographyProps<T extends React.ElementType> = {
    * | c1      | text-xs    | 12px      | 400         |
    * | c2      | -          | 11px      | 400         |
    */
-  variant: (typeof TypographyVariant)[number];
+  variant?: (typeof TypographyVariant)[number];
   font?: (typeof TypographyFont)[number];
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<T>;
@@ -76,7 +76,7 @@ const Typography: TypographyComponent = React.forwardRef(
       children,
       className,
       color = 'primary',
-      variant,
+      variant = 'b2',
       font,
       ...rest
     }: TypographyProps<T>,
