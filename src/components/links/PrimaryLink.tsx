@@ -7,7 +7,13 @@ import UnstyledLink, {
 } from '@/components/links/UnstyledLink';
 
 const PrimaryLinkSize = ['sm', 'base'] as const;
-const PrimaryLinkVariant = ['primary', 'secondary', 'basic', 'danger'] as const;
+const PrimaryLinkVariant = [
+  'primary',
+  'secondary',
+  'basic',
+  'danger',
+  'white',
+] as const;
 
 type PrimaryLinkProps = {
   size?: (typeof PrimaryLinkSize)[number];
@@ -42,6 +48,7 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
             'focus-visible:ring-secondary-400',
           ],
           variant === 'basic' && ['focus-visible:ring-gray-400'],
+          variant === 'white' && ['text-white', 'focus-visible:ring-white'],
           variant === 'danger' && [
             'text-red-500 hover:text-red-600 active:text-red-600',
             'focus-visible:ring-red-300',

@@ -3,7 +3,13 @@ import * as React from 'react';
 import clsxm from '@/lib/clsxm';
 
 const TextButtonSize = ['sm', 'base'] as const;
-const TextButtonVariant = ['primary', 'secondary', 'basic', 'danger'] as const;
+const TextButtonVariant = [
+  'primary',
+  'secondary',
+  'basic',
+  'danger',
+  'white',
+] as const;
 
 type TextButtonProps = {
   size?: (typeof TextButtonSize)[number];
@@ -41,6 +47,11 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
           ],
           variant === 'basic' && [
             'focus-visible:ring-gray-400',
+            'disabled:text-gray-300',
+          ],
+          variant === 'white' && [
+            'text-white',
+            'focus-visible:ring-white',
             'disabled:text-gray-300',
           ],
           variant === 'danger' && [
