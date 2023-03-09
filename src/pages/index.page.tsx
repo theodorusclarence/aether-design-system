@@ -134,12 +134,8 @@ const sandbox = [
     route: '/sandbox/banner',
   },
   {
-    title: 'Dashboard Layout',
-    route: '/sandbox/dashboard-layout',
-  },
-  {
-    title: 'Page Header',
-    route: '/sandbox/page-header',
+    title: 'Alert',
+    route: '/sandbox/alert',
   },
   {
     title: 'Card',
