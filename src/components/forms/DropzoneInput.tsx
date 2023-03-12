@@ -49,9 +49,14 @@ export default function DropzoneInput({
   }, [error]);
   //#endregion  //*======== Error Focus ===========
 
-  const [files, setFiles] = React.useState<FileWithPreview[]>(
-    getValues(id) || []
-  );
+  //#region  //*=========== Sync Files With RHF ===========
+  const fileValue = getValues(id);
+  const [files, setFiles] = React.useState<FileWithPreview[]>(fileValue || []);
+
+  React.useEffect(() => {
+    setFiles(fileValue);
+  }, [fileValue]);
+  //#endregion  //*======== Sync Files With RHF ===========
 
   const onDrop = React.useCallback(
     <T extends File>(acceptedFiles: T[], rejectedFiles: FileRejection[]) => {
