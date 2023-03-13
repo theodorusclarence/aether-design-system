@@ -31,6 +31,7 @@ export default function TypographyAlert({
       className={clsxm(
         'prose prose-sm max-w-none',
         'rounded-lg p-4 shadow-sm',
+        'prose-li:my-[0.1em] prose-li:marker:text-inherit',
         [
           variant === 'primary' && ['bg-primary-50 text-primary-900'],
           variant === 'secondary' && ['bg-secondary-50 text-secondary-900'],
