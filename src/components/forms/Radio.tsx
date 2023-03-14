@@ -53,8 +53,9 @@ export default function Radio({
           disabled={disabled}
           readOnly={readOnly}
           className={clsxm(
+            '',
             'shrink-0 cursor-pointer',
-            'focus:outline-none focus:ring-0',
+            'focus:outline-none focus:ring-0 focus:ring-offset-0',
             'checked:bg-primary-500 checked:hover:bg-primary-600 checked:focus:bg-primary-500 checked:active:bg-primary-700',
             (readOnly || disabled) &&
               'cursor-not-allowed bg-gray-100 disabled:checked:bg-primary-400',
