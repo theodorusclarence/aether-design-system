@@ -13,7 +13,7 @@ function CardRoot({ children, className, title, ...rest }: CardProps) {
   return (
     <div
       className={clsxm([
-        'dashboard-layout rounded-xl border border-typo-divider bg-white',
+        'rounded-xl border border-typo-divider bg-white',
         className,
       ])}
       {...rest}
