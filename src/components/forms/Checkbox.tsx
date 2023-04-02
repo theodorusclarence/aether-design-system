@@ -88,7 +88,7 @@ export default function Checkbox({
           {label}
         </Typography>
       </div>
-      {!(!hideError && error) && helperText && (
+      {helperText && (
         <Typography variant='c1' color='secondary' className='mt-1'>
           {helperText}
         </Typography>

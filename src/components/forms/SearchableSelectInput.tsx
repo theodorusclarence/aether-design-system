@@ -221,7 +221,7 @@ export default function SearchableSelectInput({
             );
           }}
         />
-        {!(!hideError && error) && helperText && (
+        {helperText && (
           <Typography variant='c1' color='secondary' className='mt-1'>
             {helperText}
           </Typography>

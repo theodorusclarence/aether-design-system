@@ -95,7 +95,7 @@ export default function DatePicker({
               />
               <HiOutlineCalendar className='pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 transform text-lg text-typo-icons' />
             </div>
-            {!(!hideError && error) && helperText && (
+            {helperText && (
               <Typography variant='c1' color='secondary' className='mt-1'>
                 {helperText}
               </Typography>
