@@ -53,7 +53,7 @@ export default function FilePreview({
   return imagesType.includes(file.type) ? (
     <>
       <li
-        className='flex items-center justify-between py-3 pl-3 pr-4 text-sm'
+        className='flex min-h-[2.25rem] items-center justify-between py-0 pl-3 pr-4 text-sm md:min-h-[2.5rem]'
         key={file.name}
       >
         <div className='flex w-0 flex-1 items-center'>
@@ -103,7 +103,7 @@ export default function FilePreview({
   ) : (
     <li
       key={file.name}
-      className='flex items-center justify-between py-3 pl-3 pr-4 text-sm'
+      className='flex min-h-[2.25rem] items-center justify-between py-0 pl-3 pr-4 text-sm md:min-h-[2.5rem]'
     >
       <div className='flex w-0 flex-1 items-center'>
         <HiOutlinePaperClip
