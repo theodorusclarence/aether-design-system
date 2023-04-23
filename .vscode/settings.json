@@ -9,6 +9,7 @@
   "tailwindCSS.classAttributes": [
     "class",
     "className",
+    "classNames",
     "leftIconClassName",
     "rightIconClassName",
     "iconClassName",
