@@ -101,7 +101,11 @@ export default function SearchableSelectInput({
     option: (styles, state) => ({
       ...styles,
       color: 'black',
-      background: state.isSelected ? 'var(--color-primary-100)' : 'white',
+      background: state.isFocused
+        ? 'var(--color-primary-50)'
+        : state.isSelected
+        ? 'var(--color-primary-100)'
+        : 'white',
       ':hover': {
         background: '#E5E7EB',
       },
