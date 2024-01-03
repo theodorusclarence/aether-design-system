@@ -15,7 +15,7 @@ type OptionType = {
 
 export default function useQueryToast<T>(
   query: UseQueryResult<T, AxiosError<ApiError>>,
-  customMessages: OptionType = {}
+  customMessages: OptionType = {},
 ) {
   const { data, isError, isLoading, error } = query;
 
@@ -37,7 +37,7 @@ export default function useQueryToast<T>(
           : toastMessage.error(error),
         {
           id: toastStatus.current,
-        }
+        },
       );
       toastStatus.current = 'done';
     } else if (isLoading) {

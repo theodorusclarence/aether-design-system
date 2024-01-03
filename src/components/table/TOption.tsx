@@ -30,7 +30,7 @@ export default function TOption({
           'border-none outline-none focus:border-none focus:outline-none focus:ring-0',
           'h-[2.25rem] py-0 md:h-[2.5rem]',
           'focus-visible:ring focus-visible:ring-primary-400',
-          'active:bg-primary-100 disabled:bg-primary-100'
+          'active:bg-primary-100 disabled:bg-primary-100',
         )}
         value={value}
         onChange={onChange}

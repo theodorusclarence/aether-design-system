@@ -31,11 +31,11 @@ export default function SandboxPage() {
     isLoading,
     mutate,
   } = useMutationToast<ApiResponse<undefined>, LoginData>(
-    useMutation((data) => apiMock.post('/login', data).then((res) => res.data))
+    useMutation((data) => apiMock.post('/login', data).then((res) => res.data)),
   );
 
   const { data: queryData } = useQueryToast(
-    useQuery<ApiResponse<User>, AxiosError<ApiError>>(['/me'], mockQuery)
+    useQuery<ApiResponse<User>, AxiosError<ApiError>>(['/me'], mockQuery),
   );
 
   return (

@@ -84,7 +84,9 @@
   /* #endregion  /**======== Fonts =========== */
 
   .cursor-newtab {
-    cursor: url('/images/new-tab.png') 10 10, pointer;
+    cursor:
+      url('/images/new-tab.png') 10 10,
+      pointer;
   }
 
   /* #region  /**=========== Typography =========== */
@@ -165,8 +167,12 @@
         var(--color-primary-400),
         var(--color-primary-500)
       );
-    background-size: 100% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
+    background-size:
+      100% 2px,
+      0 2px;
+    background-position:
+      100% 100%,
+      0 100%;
     background-repeat: no-repeat;
   }
   @media (prefers-reduced-motion: no-preference) {
@@ -178,7 +184,9 @@
   }
   .animated-underline:hover,
   .animated-underline:focus-visible {
-    background-size: 0 2px, 100% 2px;
+    background-size:
+      0 2px,
+      100% 2px;
   }
 }
 

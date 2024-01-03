@@ -1,7 +1,7 @@
 export function buildPaginationControl(
   currentPage: number,
   pageCount: number,
-  delta = 1
+  delta = 1,
 ) {
   const rangeWithDots: (number | string)[] = [];
 

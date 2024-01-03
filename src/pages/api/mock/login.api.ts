@@ -16,7 +16,7 @@ export default async function login(req: NextApiRequest, res: NextApiResponse) {
           : res.status(500).json({
               message: `Simulasi error (${+errorRate * 100}% error rate)`,
             }),
-      1000
+      1000,
     );
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });

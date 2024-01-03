@@ -20,7 +20,7 @@ const TooltipContent = React.forwardRef<
     className={clsxm(
       'z-50 overflow-hidden rounded-lg border border-typo-outline bg-white px-3 py-1.5 shadow-md',
       'animate-in fade-in-50 duration-100 data-[side=bottom]:slide-in-from-top-1 data-[side=top]:slide-in-from-bottom-1 data-[side=left]:slide-in-from-right-1 data-[side=right]:slide-in-from-left-1',
-      className
+      className,
     )}
     {...props}
   />

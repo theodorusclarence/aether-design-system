@@ -15,7 +15,7 @@ type OptionType = {
 
 export default function useMutationToast<T, K>(
   mutation: UseMutationResult<T, AxiosError<ApiError>, K>,
-  customMessages: OptionType = {}
+  customMessages: OptionType = {},
 ) {
   const { data, isError, isLoading, error } = mutation;
 
@@ -37,7 +37,7 @@ export default function useMutationToast<T, K>(
           : toastMessage.error(error),
         {
           id: toastStatus.current,
-        }
+        },
       );
       toastStatus.current = 'done';
     } else if (isLoading) {

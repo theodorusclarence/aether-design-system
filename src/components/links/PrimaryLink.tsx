@@ -23,7 +23,7 @@ type PrimaryLinkProps = {
 const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
   (
     { className, children, size = 'base', variant = 'primary', ...rest },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
@@ -54,13 +54,13 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
             'focus-visible:ring-red-300',
           ],
           //#endregion  //*======== Variant ===========
-          className
+          className,
         )}
       >
         {children}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default PrimaryLink;

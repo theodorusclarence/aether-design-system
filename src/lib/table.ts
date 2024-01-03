@@ -41,5 +41,5 @@ export const buildPaginatedTableURL: BuildPaginationTableURL = ({
       arrayFormat: 'comma',
       skipEmptyString: true,
       ...options,
-    }
+    },
   );

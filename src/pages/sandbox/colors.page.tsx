@@ -115,7 +115,7 @@ function ColorBox({
     <div
       className={clsxm(
         'flex h-24 w-24 flex-col items-center justify-center break-all rounded px-1 text-center text-xs font-medium',
-        className
+        className,
       )}
     >
       {children}

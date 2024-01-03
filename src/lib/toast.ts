@@ -27,5 +27,5 @@ export const generateToastQuery = ({
       arrayFormat: 'comma',
       skipEmptyString: true,
       ...options,
-    }
+    },
   );

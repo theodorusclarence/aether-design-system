@@ -22,7 +22,7 @@ export default function SimpleCard({
           size === 'sm' && ['p-4', 'rounded-lg'],
           size === 'base' && ['p-5', 'rounded-xl'],
         ],
-        className
+        className,
       )}
       {...rest}
     />

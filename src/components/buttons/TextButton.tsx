@@ -19,7 +19,7 @@ type TextButtonProps = {
 const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
   (
     { children, className, size = 'base', variant = 'primary', ...rest },
-    ref
+    ref,
   ) => {
     return (
       <button
@@ -61,14 +61,14 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
           ],
           'disabled:cursor-not-allowed disabled:brightness-105',
           //#endregion  //*======== Variant ===========
-          className
+          className,
         )}
         {...rest}
       >
         {children}
       </button>
     );
-  }
+  },
 );
 
 export default TextButton;

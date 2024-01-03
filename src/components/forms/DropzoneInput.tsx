@@ -70,13 +70,13 @@ export default function DropzoneInput({
         const acceptedFilesPreview = acceptedFiles.map((file: T) =>
           Object.assign(file, {
             preview: URL.createObjectURL(file),
-          })
+          }),
         );
 
         setFiles(
           files
             ? [...files, ...acceptedFilesPreview].slice(0, maxFiles)
-            : acceptedFilesPreview
+            : acceptedFilesPreview,
         );
 
         setValue(
@@ -86,12 +86,12 @@ export default function DropzoneInput({
             : acceptedFiles,
           {
             shouldValidate: true,
-          }
+          },
         );
         clearErrors(id);
       }
     },
-    [clearErrors, files, id, maxFiles, setError, setValue]
+    [clearErrors, files, id, maxFiles, setError, setValue],
   );
 
   React.useEffect(() => {
@@ -104,7 +104,7 @@ export default function DropzoneInput({
 
   const deleteFile = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    file: FileWithPreview
+    file: FileWithPreview,
   ) => {
     e.preventDefault();
     const newFiles = [...files];
@@ -184,7 +184,7 @@ export default function DropzoneInput({
                     'w-full cursor-pointer rounded-lg px-2 py-8',
                     error
                       ? 'dropzone-border-dash-error border-red-500 group-focus:border-red-500'
-                      : 'dropzone-border-dash group-focus:border-primary-500'
+                      : 'dropzone-border-dash group-focus:border-primary-500',
                   )}
                 >
                   <div className='space-y-1 text-center'>

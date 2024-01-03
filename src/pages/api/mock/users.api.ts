@@ -29,7 +29,7 @@ export default function getUsers(req: NextApiRequest, res: NextApiResponse) {
 
     data = keyword
       ? users.filter(
-          (user) => user.name.toUpperCase().indexOf(keyword.toUpperCase()) > -1
+          (user) => user.name.toUpperCase().indexOf(keyword.toUpperCase()) > -1,
         )
       : users;
 
@@ -62,7 +62,7 @@ export default function getUsers(req: NextApiRequest, res: NextApiResponse) {
             total: data.length,
           },
         }),
-      1000
+      1000,
     );
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });

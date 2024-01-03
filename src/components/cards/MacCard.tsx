@@ -20,7 +20,7 @@ export default function MacCard({
       className={clsxm(
         'overflow-hidden rounded-lg',
         mode === 'light' && 'border border-typo-divider shadow-sm',
-        className
+        className,
       )}
       {...rest}
     >

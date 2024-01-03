@@ -70,7 +70,7 @@ export default function Checkbox({
             (readOnly || disabled) &&
               'cursor-not-allowed bg-gray-100 disabled:checked:bg-primary-400',
             error && 'border-danger-400 bg-danger-100',
-            size === 'sm' && 'h-3.5 w-3.5'
+            size === 'sm' && 'h-3.5 w-3.5',
           )}
           placeholder={placeholder}
           aria-describedby={name}

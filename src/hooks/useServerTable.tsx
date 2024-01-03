@@ -23,7 +23,7 @@ export default function useServerTable<T extends object>({
             desc: sort.type === 'desc',
           },
         ]
-      : []
+      : [],
   );
 
   const [pagination, setPagination] = React.useState<PaginationState>({
