@@ -8,8 +8,8 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import clsx from 'clsx';
+import { List } from 'lucide-react';
 import * as React from 'react';
-import { FiList } from 'react-icons/fi';
 
 import clsxm from '@/lib/clsxm';
 import useRenderCount from '@/hooks/useRenderCount';
@@ -77,20 +77,20 @@ export default function PaginatedTable<T extends object>({
             sorting: table.getState().sorting,
           },
           null,
-          2
+          2,
         )}
       </pre>
 
       <div
         className={clsx(
           'flex flex-col items-stretch gap-3 sm:flex-row',
-          withFilter ? 'sm:justify-between' : 'sm:justify-end'
+          withFilter ? 'sm:justify-between' : 'sm:justify-end',
         )}
       >
         {withFilter && <Filter table={table} />}
         <div className='flex gap-3'>
           <TOption
-            icon={<FiList className='text-typo-secondary' />}
+            icon={<List size={16} className='text-typo-secondary' />}
             value={table.getState().pagination.pageSize}
             onChange={(e) => {
               table.setPageSize(Number(e.target.value));

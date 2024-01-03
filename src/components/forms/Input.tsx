@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import get from 'lodash.get';
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
 import { RegisterOptions, useFormContext } from 'react-hook-form';
-import { IconType } from 'react-icons';
 
 import Typography from '@/components/typography/Typography';
 
@@ -29,7 +29,7 @@ export type InputProps = {
   hideError?: boolean;
   /** Manual validation using RHF, it is encouraged to use yup resolver instead */
   validation?: RegisterOptions;
-  leftIcon?: IconType | string;
+  leftIcon?: LucideIcon | string;
   rightNode?: React.ReactNode;
   containerClassName?: string;
 } & React.ComponentPropsWithoutRef<'input'>;
@@ -89,7 +89,7 @@ export default function Input({
               'cursor-not-allowed border-gray-300 bg-gray-100 focus:border-gray-300 focus:ring-0',
             error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
             LeftIcon && 'pl-9',
-            rightNode && 'pr-10'
+            rightNode && 'pr-10',
           )}
           placeholder={placeholder}
           aria-describedby={id}

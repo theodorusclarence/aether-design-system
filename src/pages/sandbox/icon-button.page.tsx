@@ -1,13 +1,6 @@
+import { ArrowLeft, Eye, Pencil, Plus, Save, Trash2 } from 'lucide-react';
 import * as React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import {
-  FiArrowLeft,
-  FiEdit2,
-  FiEye,
-  FiPlus,
-  FiSave,
-  FiTrash2,
-} from 'react-icons/fi';
 
 import logger from '@/lib/logger';
 
@@ -59,7 +52,7 @@ export default function IconButtonPage() {
                   placeholder='Enter your name'
                   hideError
                 />
-                <IconButton variant='primary' icon={FiSave} />
+                <IconButton variant='primary' icon={Save} />
               </form>
             </FormProvider>
 
@@ -69,30 +62,30 @@ export default function IconButtonPage() {
                   Primary
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton variant='primary' size='lg' icon={FiPlus} />
-                  <IconButton variant='primary' icon={FiEye} />
-                  <IconButton variant='primary' size='sm' icon={FiEdit2} />
-                  <IconButton variant='primary' size='xs' icon={FiPlus} />
+                  <IconButton variant='primary' size='lg' icon={Plus} />
+                  <IconButton variant='primary' icon={Eye} />
+                  <IconButton variant='primary' size='sm' icon={Pencil} />
+                  <IconButton variant='primary' size='xs' icon={Plus} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
                   <IconButton
                     variant='primary'
                     disabled
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='primary' disabled icon={FiEye} />
+                  <IconButton variant='primary' disabled icon={Eye} />
                   <IconButton
                     variant='primary'
                     disabled
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                   <IconButton
                     variant='primary'
                     disabled
                     size='xs'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
@@ -100,20 +93,20 @@ export default function IconButtonPage() {
                     variant='primary'
                     isLoading
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='primary' isLoading icon={FiEye} />
+                  <IconButton variant='primary' isLoading icon={Eye} />
                   <IconButton
                     variant='primary'
                     isLoading
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                   <IconButton
                     variant='primary'
                     isLoading
                     size='xs'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
                 </div>
               </div>
@@ -123,23 +116,23 @@ export default function IconButtonPage() {
                   Secondary
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton variant='secondary' size='lg' icon={FiPlus} />
-                  <IconButton variant='secondary' icon={FiEye} />
-                  <IconButton variant='secondary' size='sm' icon={FiEdit2} />
+                  <IconButton variant='secondary' size='lg' icon={Plus} />
+                  <IconButton variant='secondary' icon={Eye} />
+                  <IconButton variant='secondary' size='sm' icon={Pencil} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
                   <IconButton
                     variant='secondary'
                     disabled
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='secondary' disabled icon={FiEye} />
+                  <IconButton variant='secondary' disabled icon={Eye} />
                   <IconButton
                     variant='secondary'
                     disabled
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
@@ -147,14 +140,14 @@ export default function IconButtonPage() {
                     variant='secondary'
                     isLoading
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='secondary' isLoading icon={FiEye} />
+                  <IconButton variant='secondary' isLoading icon={Eye} />
                   <IconButton
                     variant='secondary'
                     isLoading
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
               </div>
@@ -164,23 +157,18 @@ export default function IconButtonPage() {
                   Danger
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton variant='danger' size='lg' icon={FiPlus} />
-                  <IconButton variant='danger' icon={FiEye} />
-                  <IconButton variant='danger' size='sm' icon={FiEdit2} />
+                  <IconButton variant='danger' size='lg' icon={Plus} />
+                  <IconButton variant='danger' icon={Eye} />
+                  <IconButton variant='danger' size='sm' icon={Pencil} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton
-                    variant='danger'
-                    disabled
-                    size='lg'
-                    icon={FiPlus}
-                  />
-                  <IconButton variant='danger' disabled icon={FiEye} />
+                  <IconButton variant='danger' disabled size='lg' icon={Plus} />
+                  <IconButton variant='danger' disabled icon={Eye} />
                   <IconButton
                     variant='danger'
                     disabled
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
@@ -188,14 +176,14 @@ export default function IconButtonPage() {
                     variant='danger'
                     isLoading
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='danger' isLoading icon={FiEye} />
+                  <IconButton variant='danger' isLoading icon={Eye} />
                   <IconButton
                     variant='danger'
                     isLoading
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
               </div>
@@ -205,23 +193,23 @@ export default function IconButtonPage() {
                   Outline
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton variant='outline' size='lg' icon={FiPlus} />
-                  <IconButton variant='outline' icon={FiEye} />
-                  <IconButton variant='outline' size='sm' icon={FiEdit2} />
+                  <IconButton variant='outline' size='lg' icon={Plus} />
+                  <IconButton variant='outline' icon={Eye} />
+                  <IconButton variant='outline' size='sm' icon={Pencil} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
                   <IconButton
                     variant='outline'
                     disabled
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='outline' disabled icon={FiEye} />
+                  <IconButton variant='outline' disabled icon={Eye} />
                   <IconButton
                     variant='outline'
                     disabled
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
@@ -229,14 +217,14 @@ export default function IconButtonPage() {
                     variant='outline'
                     isLoading
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='outline' isLoading icon={FiEye} />
+                  <IconButton variant='outline' isLoading icon={Eye} />
                   <IconButton
                     variant='outline'
                     isLoading
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
               </div>
@@ -246,23 +234,23 @@ export default function IconButtonPage() {
                   Warning
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton variant='warning' size='lg' icon={FiPlus} />
-                  <IconButton variant='warning' icon={FiEye} />
-                  <IconButton variant='warning' size='sm' icon={FiEdit2} />
+                  <IconButton variant='warning' size='lg' icon={Plus} />
+                  <IconButton variant='warning' icon={Eye} />
+                  <IconButton variant='warning' size='sm' icon={Pencil} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
                   <IconButton
                     variant='warning'
                     disabled
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='warning' disabled icon={FiEye} />
+                  <IconButton variant='warning' disabled icon={Eye} />
                   <IconButton
                     variant='warning'
                     disabled
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
@@ -270,14 +258,14 @@ export default function IconButtonPage() {
                     variant='warning'
                     isLoading
                     size='lg'
-                    icon={FiPlus}
+                    icon={Plus}
                   />
-                  <IconButton variant='warning' isLoading icon={FiEye} />
+                  <IconButton variant='warning' isLoading icon={Eye} />
                   <IconButton
                     variant='warning'
                     isLoading
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
               </div>
@@ -287,38 +275,28 @@ export default function IconButtonPage() {
                   Ghost
                 </Typography>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton variant='ghost' size='lg' icon={FiPlus} />
-                  <IconButton variant='ghost' icon={FiEye} />
-                  <IconButton variant='ghost' size='sm' icon={FiEdit2} />
+                  <IconButton variant='ghost' size='lg' icon={Plus} />
+                  <IconButton variant='ghost' icon={Eye} />
+                  <IconButton variant='ghost' size='sm' icon={Pencil} />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton
-                    variant='ghost'
-                    disabled
-                    size='lg'
-                    icon={FiPlus}
-                  />
-                  <IconButton variant='ghost' disabled icon={FiEye} />
+                  <IconButton variant='ghost' disabled size='lg' icon={Plus} />
+                  <IconButton variant='ghost' disabled icon={Eye} />
                   <IconButton
                     variant='ghost'
                     disabled
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
                 <div className='mt-3 flex flex-wrap items-end gap-3'>
-                  <IconButton
-                    variant='ghost'
-                    isLoading
-                    size='lg'
-                    icon={FiPlus}
-                  />
-                  <IconButton variant='ghost' isLoading icon={FiEye} />
+                  <IconButton variant='ghost' isLoading size='lg' icon={Plus} />
+                  <IconButton variant='ghost' isLoading icon={Eye} />
                   <IconButton
                     variant='ghost'
                     isLoading
                     size='sm'
-                    icon={FiEdit2}
+                    icon={Pencil}
                   />
                 </div>
               </div>
@@ -333,18 +311,13 @@ export default function IconButtonPage() {
                   variant='primary'
                   size='lg'
                   href='/'
-                  icon={FiArrowLeft}
+                  icon={ArrowLeft}
                 />
-                <IconLink variant='outline' href='/' icon={FiArrowLeft} />
-                <IconLink
-                  variant='ghost'
-                  size='sm'
-                  href='/'
-                  icon={FiArrowLeft}
-                />
-                <IconLink variant='outline' size='xs' href='/' icon={FiPlus} />
-                <IconLink variant='secondary' size='lg' href='/' icon={FiEye} />
-                <IconLink variant='danger' href='/' icon={FiTrash2} />
+                <IconLink variant='outline' href='/' icon={ArrowLeft} />
+                <IconLink variant='ghost' size='sm' href='/' icon={ArrowLeft} />
+                <IconLink variant='outline' size='xs' href='/' icon={Plus} />
+                <IconLink variant='secondary' size='lg' href='/' icon={Eye} />
+                <IconLink variant='danger' href='/' icon={Trash2} />
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react';
+import { X } from 'lucide-react';
 import * as React from 'react';
-import { HiOutlineX } from 'react-icons/hi';
 
 import clsxm from '@/lib/clsxm';
 
@@ -78,7 +78,7 @@ export function ModalRoot({
               className={clsxm(
                 'align inline-block transform rounded-2xl bg-white text-left shadow-xl transition-all sm:align-middle',
                 'sm:w-11/12 sm:max-w-xl',
-                modalContainerClassName
+                modalContainerClassName,
               )}
             >
               <div className='w-full divide-y divide-typo-divider'>
@@ -94,7 +94,7 @@ export function ModalRoot({
                     onClick={() => setOpen(false)}
                     variant='ghost'
                     size='sm'
-                    icon={HiOutlineX}
+                    icon={X}
                     iconClassName='text-2xl text-typo-icons'
                   />
                 </header>

@@ -1,5 +1,5 @@
+import { HelpCircle } from 'lucide-react';
 import * as React from 'react';
-import { BsQuestionCircle } from 'react-icons/bs';
 
 import IconButton from '@/components/buttons/IconButton';
 import {
@@ -19,7 +19,7 @@ export default function ExamplePopover({ ...rest }: ExamplePopoverProps) {
         <IconButton
           variant='ghost'
           className='rounded-full'
-          icon={BsQuestionCircle}
+          icon={HelpCircle}
         />
       </PopoverTrigger>
       <PopoverContent side='right'>

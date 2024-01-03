@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { ColumnDef } from '@tanstack/react-table';
+import { Eye } from 'lucide-react';
 import * as React from 'react';
-import { FiEye } from 'react-icons/fi';
 
 import { mockQuery } from '@/lib/axios-mock';
 import { buildPaginatedTableURL } from '@/lib/table';
@@ -55,7 +55,7 @@ export default function TablePage() {
     {
       id: 'actions',
       header: 'Action',
-      cell: () => <IconButton variant='outline' icon={FiEye} />,
+      cell: () => <IconButton variant='outline' icon={Eye} />,
     },
   ];
   //#endregion  //*======== Table Definition ===========
@@ -78,7 +78,7 @@ export default function TablePage() {
           ],
         },
       ],
-      []
+      [],
     );
 
   const url = buildPaginatedTableURL({
@@ -101,7 +101,7 @@ export default function TablePage() {
     mockQuery,
     {
       keepPreviousData: true,
-    }
+    },
   );
   //#endregion  //*======== Fetch Data ===========
 
@@ -127,7 +127,7 @@ export default function TablePage() {
               {JSON.stringify(
                 { renderCount, tableState, url, filterQuery },
                 null,
-                2
+                2,
               )}
             </pre>
 

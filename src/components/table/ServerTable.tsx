@@ -6,8 +6,8 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import clsx from 'clsx';
+import { List } from 'lucide-react';
 import * as React from 'react';
-import { FiList } from 'react-icons/fi';
 
 import clsxm from '@/lib/clsxm';
 
@@ -77,18 +77,17 @@ export default function ServerTable<T extends object>({
 
   return (
     <div className={clsxm('flex flex-col', className)} {...rest}>
-      <pre>{JSON.stringify({ isLoading }, null, 2)}</pre>
       <div
         className={clsx(
           'flex flex-col items-stretch gap-3 sm:flex-row',
-          withFilter ? 'sm:justify-between' : 'sm:justify-end'
+          withFilter ? 'sm:justify-between' : 'sm:justify-end',
         )}
       >
         {withFilter && <Filter table={table} />}
         <div className='flex items-center gap-3'>
           {Header}
           <TOption
-            icon={<FiList />}
+            icon={<List size={16} />}
             value={table.getState().pagination.pageSize}
             onChange={(e) => {
               table.setPageSize(Number(e.target.value));

@@ -1,5 +1,5 @@
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Slider, { CustomArrowProps, Settings } from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
@@ -17,7 +17,7 @@ function NextArrow({ onClick }: CustomArrowProps) {
   return (
     <IconButton
       onClick={onClick}
-      icon={FiChevronRight}
+      icon={ChevronRight}
       variant='ghost'
       size='sm'
       className='absolute top-1/2 right-0 z-10 flex translate-x-full -translate-y-1/2 items-center rounded-full'
@@ -29,7 +29,7 @@ function PrevArrow({ onClick }: CustomArrowProps) {
   return (
     <IconButton
       onClick={onClick}
-      icon={FiChevronLeft}
+      icon={ChevronLeft}
       variant='ghost'
       size='sm'
       className='absolute top-1/2 left-0 z-10 flex -translate-x-full -translate-y-1/2 items-center rounded-full'
@@ -56,7 +56,7 @@ export default function Banner({ className, ...rest }: BannerProps) {
       className={clsxm(
         'flex items-center bg-primary-100 py-3',
         'min-h-[4rem]',
-        className
+        className,
       )}
       {...rest}
     >

@@ -1,5 +1,5 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
 
@@ -14,7 +14,7 @@ type AlertVariant = (typeof alertVariant)[number];
 
 type TypographyAlertProps = {
   variant?: AlertVariant;
-  leftIcon?: IconType;
+  leftIcon?: LucideIcon;
   leftIconClassName?: string;
 } & React.ComponentPropsWithoutRef<'div'>;
 
@@ -40,7 +40,7 @@ export default function TypographyAlert({
           variant === 'success' && ['bg-green-50 text-green-900'],
         ],
         'flex items-start gap-4',
-        className
+        className,
       )}
       {...rest}
     >
@@ -57,7 +57,7 @@ export default function TypographyAlert({
                 variant === 'danger' && ['text-red-600'],
                 variant === 'success' && ['text-green-600'],
               ],
-              leftIconClassName
+              leftIconClassName,
             )}
           />
         </div>

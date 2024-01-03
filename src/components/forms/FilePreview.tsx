@@ -1,11 +1,6 @@
+import { ExternalLink, Eye, Image as ImageIcon, Paperclip } from 'lucide-react';
+import { X } from 'lucide-react';
 import * as React from 'react';
-import {
-  HiOutlineExternalLink,
-  HiOutlineEye,
-  HiOutlinePaperClip,
-  HiOutlinePhotograph,
-  HiX,
-} from 'react-icons/hi';
 import Lightbox from 'react-image-lightbox-rotation';
 
 import 'react-image-lightbox-rotation/style.css';
@@ -20,14 +15,14 @@ type FilePreviewProps = {
   | {
       deleteFile?: (
         e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-        file: FileWithPreview
+        file: FileWithPreview,
       ) => void;
       readOnly?: true;
     }
   | {
       deleteFile: (
         e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-        file: FileWithPreview
+        file: FileWithPreview,
       ) => void;
       readOnly?: false;
     }
@@ -57,7 +52,7 @@ export default function FilePreview({
         key={file.name}
       >
         <div className='flex w-0 flex-1 items-center'>
-          <HiOutlinePhotograph
+          <ImageIcon
             className='h-5 w-5 flex-shrink-0 text-gray-400'
             aria-hidden='true'
           />
@@ -69,7 +64,7 @@ export default function FilePreview({
             onClick={() => setIsOpen(true)}
             className='inline-block rounded text-xl font-medium text-gray-500 hover:text-gray-700 focus:outline-none focus:ring focus:ring-primary-500'
           >
-            <HiOutlineEye />
+            <Eye />
           </button>
           {!readOnly && (
             <button
@@ -77,7 +72,7 @@ export default function FilePreview({
               onClick={handleDelete}
               className='rounded text-xl font-medium text-red-500 hover:text-red-700 focus:outline-none focus:ring focus:ring-red-500'
             >
-              <HiX />
+              <X />
             </button>
           )}
         </div>
@@ -91,7 +86,7 @@ export default function FilePreview({
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
             setIndex(
-              (prevIndex) => (prevIndex + images.length - 1) % images.length
+              (prevIndex) => (prevIndex + images.length - 1) % images.length,
             )
           }
           onMoveNextRequest={() =>
@@ -106,7 +101,7 @@ export default function FilePreview({
       className='flex min-h-[2.25rem] items-center justify-between py-0 pl-3 pr-4 text-sm md:min-h-[2.5rem]'
     >
       <div className='flex w-0 flex-1 items-center'>
-        <HiOutlinePaperClip
+        <Paperclip
           className='h-5 w-5 flex-shrink-0 text-gray-400'
           aria-hidden='true'
         />
@@ -117,7 +112,7 @@ export default function FilePreview({
           href={file.preview}
           className='rounded text-gray-500 hover:text-gray-700 focus:outline-none focus:ring focus:ring-primary-500'
         >
-          <HiOutlineExternalLink size={20} />
+          <ExternalLink size={20} />
         </UnstyledLink>
         {!readOnly && (
           <button
@@ -125,7 +120,7 @@ export default function FilePreview({
             type='button'
             onClick={(e) => deleteFile?.(e, file)}
           >
-            <HiX size={24} />
+            <X size={24} />
           </button>
         )}
       </div>

@@ -1,5 +1,5 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
 
@@ -20,7 +20,7 @@ const IconLinkSize = ['xs', 'sm', 'base', 'lg'] as const;
 type IconLinkProps = {
   variant?: (typeof IconLinkVariant)[number];
   size?: (typeof IconLinkSize)[number];
-  icon?: IconType;
+  icon?: LucideIcon;
   iconClassName?: string;
 } & Omit<UnstyledLinkProps, 'children'>;
 
@@ -34,7 +34,7 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
       iconClassName,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
@@ -109,14 +109,14 @@ const IconLink = React.forwardRef<HTMLAnchorElement, IconLinkProps>(
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
         {...rest}
       >
         {Icon && <Icon size='1em' className={clsxm(iconClassName)} />}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default IconLink;

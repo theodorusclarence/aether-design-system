@@ -1,8 +1,8 @@
 import produce from 'immer';
+import { X } from 'lucide-react';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { toast, ToastBar, Toaster } from 'react-hot-toast';
-import { HiX } from 'react-icons/hi';
 
 export default function DismissableToast() {
   const router = useRouter();
@@ -52,7 +52,7 @@ export default function DismissableToast() {
                     className='rounded-full p-1 ring-primary-400 transition hover:bg-light focus:outline-none focus-visible:ring'
                     onClick={() => toast.dismiss(t.id)}
                   >
-                    <HiX />
+                    <X />
                   </button>
                 )}
               </>

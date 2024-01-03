@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import get from 'lodash.get';
+import { Calendar } from 'lucide-react';
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 import { Controller, RegisterOptions, useFormContext } from 'react-hook-form';
-import { HiOutlineCalendar } from 'react-icons/hi';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -80,7 +80,7 @@ export default function DatePicker({
                   (readOnly || disabled) &&
                     'cursor-not-allowed border-gray-300 bg-gray-100 focus:border-gray-300 focus:ring-0',
                   error &&
-                    'border-red-500 focus:border-red-500 focus:ring-red-500'
+                    'border-red-500 focus:border-red-500 focus:ring-red-500',
                 )}
                 placeholderText={placeholder}
                 aria-describedby={id}
@@ -93,7 +93,10 @@ export default function DatePicker({
                 disabled={disabled}
                 {...rest}
               />
-              <HiOutlineCalendar className='pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 transform text-lg text-typo-icons' />
+              <Calendar
+                size={18}
+                className='pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 transform text-typo-icons'
+              />
             </div>
             {helperText && (
               <Typography variant='c1' color='secondary' className='mt-1'>

@@ -1,5 +1,5 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
 
@@ -16,7 +16,7 @@ const statisticsCardVariant = [
 type StatisticsCardVariant = (typeof statisticsCardVariant)[number];
 
 type StatisticsCardProps = {
-  icon?: IconType;
+  icon?: LucideIcon;
   iconClassName?: string;
   isLoading?: boolean;
   label: string;
@@ -40,7 +40,7 @@ export default function StatisticsCard({
         'rounded-xl bg-white p-3',
         'border border-typo-divider',
         'flex items-center gap-3',
-        className
+        className,
       )}
       {...rest}
     >
@@ -64,7 +64,7 @@ export default function StatisticsCard({
                 variant === 'danger' && ['text-red-500'],
                 variant === 'success' && ['text-green-500'],
               ],
-              iconClassName
+              iconClassName,
             )}
           />
         </div>

@@ -1,5 +1,5 @@
+import { Flower } from 'lucide-react';
 import * as React from 'react';
-import { GiExplosionRays } from 'react-icons/gi';
 
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
@@ -11,13 +11,12 @@ import Typography from '@/components/typography/Typography';
 export default function HomePage() {
   return (
     <Layout>
-      {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
       <main>
         <section className='bg-white'>
           <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-            <GiExplosionRays className='text-6xl text-yellow-400' />
+            <Flower size={40} className='text-primary-500' />
 
             <Typography as='h1' variant='j1' className='mt-2'>
               Aether Design System

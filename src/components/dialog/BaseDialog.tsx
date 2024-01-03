@@ -1,12 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import clsx from 'clsx';
+import { AlertCircle, AlertTriangle, Check, X } from 'lucide-react';
 import * as React from 'react';
-import {
-  HiExclamationCircle,
-  HiOutlineCheck,
-  HiOutlineExclamation,
-  HiOutlineX,
-} from 'react-icons/hi';
 
 import useLoadingToast from '@/hooks/toast/useLoadingToast';
 
@@ -111,7 +106,7 @@ export default function BaseDialog({
               className={clsx(
                 'z-auto inline-block w-full transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all',
                 'pt-5 pb-4 sm:my-8 sm:pt-6 sm:pb-4',
-                'sm:max-w-lg sm:align-middle'
+                'sm:max-w-lg sm:align-middle',
               )}
             >
               <div className='absolute top-0 right-0 hidden pt-4 pr-4 sm:block'>
@@ -119,21 +114,21 @@ export default function BaseDialog({
                   onClick={onClose}
                   variant='ghost'
                   size='sm'
-                  icon={HiOutlineX}
+                  icon={X}
                   iconClassName='text-2xl text-typo-icons'
                 />
               </div>
               <div
                 className={clsx(
                   'sm:flex sm:items-start',
-                  'px-4 sm:px-6 sm:pb-6'
+                  'px-4 sm:px-6 sm:pb-6',
                 )}
               >
                 <div
                   className={clsx(
                     'flex flex-shrink-0 items-center justify-center rounded-full',
                     'mx-auto h-12 w-12 sm:mx-0 sm:h-10 sm:w-10',
-                    current.bg.light
+                    current.bg.light,
                   )}
                 >
                   <current.icon
@@ -156,13 +151,13 @@ export default function BaseDialog({
                 className={clsx(
                   'mt-5 sm:mt-4 sm:flex sm:flex-row-reverse',
                   'px-4 pt-4 sm:px-6',
-                  'border-t border-typo-divider'
+                  'border-t border-typo-divider',
                 )}
               >
                 <Button
                   onClick={onSubmit}
                   className={clsx(
-                    'w-full items-center justify-center !font-medium sm:ml-3 sm:w-auto sm:text-sm'
+                    'w-full items-center justify-center !font-medium sm:ml-3 sm:w-auto sm:text-sm',
                   )}
                   isLoading={listenForLoadingToast && isLoading}
                 >
@@ -193,7 +188,7 @@ const colorVariant = {
     text: {
       primary: 'text-green-500',
     },
-    icon: HiOutlineCheck,
+    icon: Check,
   },
   warning: {
     bg: {
@@ -202,7 +197,7 @@ const colorVariant = {
     text: {
       primary: 'text-yellow-500',
     },
-    icon: HiOutlineExclamation,
+    icon: AlertTriangle,
   },
   danger: {
     bg: {
@@ -211,6 +206,6 @@ const colorVariant = {
     text: {
       primary: 'text-red-500',
     },
-    icon: HiExclamationCircle,
+    icon: AlertCircle,
   },
 };

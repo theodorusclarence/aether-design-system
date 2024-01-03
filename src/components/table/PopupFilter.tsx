@@ -1,6 +1,6 @@
+import { ChevronDown, Filter, X } from 'lucide-react';
 import * as React from 'react';
 import { FormProvider, useForm, useWatch } from 'react-hook-form';
-import { FiChevronDown, FiFilter, FiX } from 'react-icons/fi';
 
 import Button from '@/components/buttons/Button';
 import IconButton from '@/components/buttons/IconButton';
@@ -66,8 +66,8 @@ export default function PopupFilter<T extends Record<string, string[]>>({
         <Button
           variant='ghost'
           size='sm'
-          leftIcon={FiFilter}
-          rightIcon={FiChevronDown}
+          leftIcon={Filter}
+          rightIcon={ChevronDown}
           className='bg-primary-100'
         >
           {title} {filter?.length > 0 && `(${filter.length})`}
@@ -87,7 +87,7 @@ export default function PopupFilter<T extends Record<string, string[]>>({
                 Reset Filter
               </Typography>
               <PopoverClose>
-                <IconButton variant='ghost' icon={FiX} />
+                <IconButton variant='ghost' icon={X} />
               </PopoverClose>
             </div>
           </div>

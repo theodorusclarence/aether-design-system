@@ -1,5 +1,5 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
 
@@ -22,8 +22,8 @@ type TagProps = {
   children: React.ReactNode;
   size?: TagSize;
   color?: TagColor;
-  leftIcon?: IconType;
-  rightIcon?: IconType;
+  leftIcon?: LucideIcon;
+  rightIcon?: LucideIcon;
   leftIconClassName?: string;
   rightIconClassName?: string;
 } & React.ComponentPropsWithoutRef<'div'>;
@@ -41,7 +41,7 @@ const Tag = React.forwardRef<HTMLDivElement, TagProps>(
       rightIconClassName,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -63,7 +63,7 @@ const Tag = React.forwardRef<HTMLDivElement, TagProps>(
           'inline-flex items-center gap-1 rounded-full px-3 font-medium',
           LeftIcon && 'pl-3',
           RightIcon && 'pr-3',
-          className
+          className,
         )}
         ref={ref}
         {...rest}
@@ -81,7 +81,7 @@ const Tag = React.forwardRef<HTMLDivElement, TagProps>(
         )}
       </div>
     );
-  }
+  },
 );
 
 export default Tag;

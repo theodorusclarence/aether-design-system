@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import get from 'lodash.get';
+import { ChevronDown, X } from 'lucide-react';
 import { Controller, RegisterOptions, useFormContext } from 'react-hook-form';
-import { FiChevronDown, FiX } from 'react-icons/fi';
 import Select, { components, MultiValue, StylesConfig } from 'react-select';
 
 import Typography from '@/components/typography/Typography';
@@ -104,8 +104,8 @@ export default function SearchableSelectInput({
       background: state.isFocused
         ? 'var(--color-primary-50)'
         : state.isSelected
-        ? 'var(--color-primary-100)'
-        : 'white',
+          ? 'var(--color-primary-100)'
+          : 'white',
       ':hover': {
         background: '#E5E7EB',
       },
@@ -157,7 +157,7 @@ export default function SearchableSelectInput({
         className={clsx(
           'relative',
           withLabel && 'mt-1',
-          (disabled || readOnly) && 'cursor-not-allowed'
+          (disabled || readOnly) && 'cursor-not-allowed',
         )}
       >
         <Controller
@@ -174,7 +174,7 @@ export default function SearchableSelectInput({
                     ? field.value?.map(
                         (value: unknown) =>
                           options.find((option) => option.value === value) ??
-                          null
+                          null,
                       )
                     : options.find((opt) => opt.value === field.value) ?? null
                 }
@@ -185,11 +185,11 @@ export default function SearchableSelectInput({
                           selectedOptions as MultiValue<
                             (typeof options)[number]
                           >
-                        ).map((option) => option?.value ?? '')
+                        ).map((option) => option?.value ?? ''),
                       )
                     : field.onChange(
                         (selectedOptions as (typeof options)[number])?.value ??
-                          ''
+                          '',
                       );
                 }}
                 isDisabled={disabled}
@@ -206,17 +206,20 @@ export default function SearchableSelectInput({
                   IndicatorSeparator: () => null,
                   DropdownIndicator: (props) => (
                     <components.DropdownIndicator {...props}>
-                      <FiChevronDown className='text-xl' />
+                      <ChevronDown size={18} />
                     </components.DropdownIndicator>
                   ),
                   ClearIndicator: (props) => (
                     <components.ClearIndicator {...props}>
-                      <FiX className='mr-0.5 text-lg text-typo-icons hover:text-typo-secondary' />
+                      <X
+                        size={18}
+                        className='mr-0.5 text-typo-icons hover:text-typo-secondary'
+                      />
                     </components.ClearIndicator>
                   ),
                   MultiValueRemove: (props) => (
                     <components.MultiValueRemove {...props}>
-                      <FiX size={16} />
+                      <X size={18} />
                     </components.MultiValueRemove>
                   ),
                 }}

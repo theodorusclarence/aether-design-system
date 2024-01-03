@@ -1,5 +1,5 @@
+import { LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 import clsxm from '@/lib/clsxm';
 
@@ -19,8 +19,8 @@ const ButtonLinkSize = ['sm', 'base', 'lg'] as const;
 type ButtonLinkProps = {
   variant?: (typeof ButtonLinkVariant)[number];
   size?: (typeof ButtonLinkSize)[number];
-  leftIcon?: IconType;
-  rightIcon?: IconType;
+  leftIcon?: LucideIcon;
+  rightIcon?: LucideIcon;
   leftIconClassName?: string;
   rightIconClassName?: string;
 } & UnstyledLinkProps;
@@ -38,7 +38,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       rightIconClassName,
       ...rest
     },
-    ref
+    ref,
   ) => {
     return (
       <UnstyledLink
@@ -104,7 +104,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           ],
           //#endregion  //*======== Variants ===========
           'disabled:cursor-not-allowed',
-          className
+          className,
         )}
       >
         {LeftIcon && (
@@ -138,7 +138,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         )}
       </UnstyledLink>
     );
-  }
+  },
 );
 
 export default ButtonLink;

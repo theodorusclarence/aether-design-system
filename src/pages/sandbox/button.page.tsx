@@ -1,6 +1,6 @@
+import { ArrowRight, Plus, Save } from 'lucide-react';
 import * as React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { FiArrowRight, FiPlus, FiSave } from 'react-icons/fi';
 
 import logger from '@/lib/logger';
 
@@ -52,7 +52,7 @@ export default function ButtonPage() {
                   placeholder='Enter your name'
                   hideError
                 />
-                <Button variant='primary' leftIcon={FiSave}>
+                <Button variant='primary' leftIcon={Save}>
                   Save
                 </Button>
               </form>
@@ -60,7 +60,7 @@ export default function ButtonPage() {
 
             <div className='mt-8 flex space-x-2'>
               <Button variant='outline'>Cancel</Button>
-              <Button variant='primary' leftIcon={FiSave}>
+              <Button variant='primary' leftIcon={Save}>
                 Save
               </Button>
             </div>
@@ -73,23 +73,23 @@ export default function ButtonPage() {
                 <Button
                   variant='primary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Primary Button
                 </Button>
                 <Button
                   variant='primary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Primary Button
                 </Button>
                 <Button
                   variant='primary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Primary Button
                 </Button>
@@ -98,16 +98,16 @@ export default function ButtonPage() {
                 <Button
                   variant='primary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Primary Disabled
                 </Button>
                 <Button
                   variant='primary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Primary Disabled
@@ -115,8 +115,8 @@ export default function ButtonPage() {
                 <Button
                   variant='primary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Primary Disabled
@@ -126,16 +126,16 @@ export default function ButtonPage() {
                 <Button
                   variant='primary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Primary Disabled
                 </Button>
                 <Button
                   variant='primary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Primary Disabled
@@ -143,8 +143,8 @@ export default function ButtonPage() {
                 <Button
                   variant='primary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Primary Disabled
@@ -160,23 +160,23 @@ export default function ButtonPage() {
                 <Button
                   variant='secondary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Secondary Button
                 </Button>
                 <Button
                   variant='secondary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Secondary Button
                 </Button>
                 <Button
                   variant='secondary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Secondary Button
                 </Button>
@@ -185,16 +185,16 @@ export default function ButtonPage() {
                 <Button
                   variant='secondary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Secondary Disabled
                 </Button>
                 <Button
                   variant='secondary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Secondary Disabled
@@ -202,8 +202,8 @@ export default function ButtonPage() {
                 <Button
                   variant='secondary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Secondary Disabled
@@ -213,16 +213,16 @@ export default function ButtonPage() {
                 <Button
                   variant='secondary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Secondary Disabled
                 </Button>
                 <Button
                   variant='secondary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Secondary Disabled
@@ -230,8 +230,8 @@ export default function ButtonPage() {
                 <Button
                   variant='secondary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Secondary Disabled
@@ -247,23 +247,19 @@ export default function ButtonPage() {
                 <Button
                   variant='danger'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Danger Button
                 </Button>
-                <Button
-                  variant='danger'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
-                >
+                <Button variant='danger' leftIcon={Plus} rightIcon={ArrowRight}>
                   Danger Button
                 </Button>
                 <Button
                   variant='danger'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Danger Button
                 </Button>
@@ -272,16 +268,16 @@ export default function ButtonPage() {
                 <Button
                   variant='danger'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Danger Disabled
                 </Button>
                 <Button
                   variant='danger'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Danger Disabled
@@ -289,8 +285,8 @@ export default function ButtonPage() {
                 <Button
                   variant='danger'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Danger Disabled
@@ -300,16 +296,16 @@ export default function ButtonPage() {
                 <Button
                   variant='danger'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Danger Disabled
                 </Button>
                 <Button
                   variant='danger'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Danger Disabled
@@ -317,8 +313,8 @@ export default function ButtonPage() {
                 <Button
                   variant='danger'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Danger Disabled
@@ -334,23 +330,23 @@ export default function ButtonPage() {
                 <Button
                   variant='outline'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Outline Button
                 </Button>
                 <Button
                   variant='outline'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Outline Button
                 </Button>
                 <Button
                   variant='outline'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Outline Button
                 </Button>
@@ -359,16 +355,16 @@ export default function ButtonPage() {
                 <Button
                   variant='outline'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Outline Disabled
                 </Button>
                 <Button
                   variant='outline'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Outline Disabled
@@ -376,8 +372,8 @@ export default function ButtonPage() {
                 <Button
                   variant='outline'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Outline Disabled
@@ -387,16 +383,16 @@ export default function ButtonPage() {
                 <Button
                   variant='outline'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Outline Disabled
                 </Button>
                 <Button
                   variant='outline'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Outline Disabled
@@ -404,8 +400,8 @@ export default function ButtonPage() {
                 <Button
                   variant='outline'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Outline Disabled
@@ -421,23 +417,23 @@ export default function ButtonPage() {
                 <Button
                   variant='warning'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Warning Button
                 </Button>
                 <Button
                   variant='warning'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Warning Button
                 </Button>
                 <Button
                   variant='warning'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Warning Button
                 </Button>
@@ -446,16 +442,16 @@ export default function ButtonPage() {
                 <Button
                   variant='warning'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Warning Disabled
                 </Button>
                 <Button
                   variant='warning'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Warning Disabled
@@ -463,8 +459,8 @@ export default function ButtonPage() {
                 <Button
                   variant='warning'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Warning Disabled
@@ -474,16 +470,16 @@ export default function ButtonPage() {
                 <Button
                   variant='warning'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Warning Disabled
                 </Button>
                 <Button
                   variant='warning'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Warning Disabled
@@ -491,8 +487,8 @@ export default function ButtonPage() {
                 <Button
                   variant='warning'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Warning Disabled
@@ -505,18 +501,14 @@ export default function ButtonPage() {
                 Ghost
               </Typography>
               <div className='mt-3 flex flex-wrap items-end gap-3'>
-                <Button
-                  variant='ghost'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
-                >
+                <Button variant='ghost' leftIcon={Plus} rightIcon={ArrowRight}>
                   Ghost Button
                 </Button>
                 <Button
                   variant='ghost'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Ghost Button
                 </Button>
@@ -524,8 +516,8 @@ export default function ButtonPage() {
               <div className='mt-3 flex flex-wrap items-end gap-3'>
                 <Button
                   variant='ghost'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Ghost Disabled
@@ -533,8 +525,8 @@ export default function ButtonPage() {
                 <Button
                   variant='ghost'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   disabled
                 >
                   Ghost Disabled
@@ -543,8 +535,8 @@ export default function ButtonPage() {
               <div className='mt-3 flex flex-wrap items-end gap-3'>
                 <Button
                   variant='ghost'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Ghost Disabled
@@ -552,8 +544,8 @@ export default function ButtonPage() {
                 <Button
                   variant='ghost'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                   isLoading
                 >
                   Ghost Disabled
@@ -570,16 +562,16 @@ export default function ButtonPage() {
                   href='/'
                   variant='primary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Button Link
                 </ButtonLink>
                 <ButtonLink
                   href='/'
                   variant='primary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Button Link
                 </ButtonLink>
@@ -587,8 +579,8 @@ export default function ButtonPage() {
                   href='/'
                   variant='primary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Button Link
                 </ButtonLink>
@@ -598,16 +590,16 @@ export default function ButtonPage() {
                   href='/'
                   variant='secondary'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Secondary Button Link
                 </ButtonLink>
                 <ButtonLink
                   href='/'
                   variant='secondary'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Secondary Button Link
                 </ButtonLink>
@@ -615,8 +607,8 @@ export default function ButtonPage() {
                   href='/'
                   variant='secondary'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Secondary Button Link
                 </ButtonLink>
@@ -626,16 +618,16 @@ export default function ButtonPage() {
                   href='/'
                   variant='outline'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Outline Button Link
                 </ButtonLink>
                 <ButtonLink
                   href='/'
                   variant='outline'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Outline Button Link
                 </ButtonLink>
@@ -643,8 +635,8 @@ export default function ButtonPage() {
                   href='/'
                   variant='outline'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Outline Button Link
                 </ButtonLink>
@@ -654,16 +646,16 @@ export default function ButtonPage() {
                   href='/'
                   variant='warning'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Warning Button Link
                 </ButtonLink>
                 <ButtonLink
                   href='/'
                   variant='warning'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Warning Button Link
                 </ButtonLink>
@@ -671,8 +663,8 @@ export default function ButtonPage() {
                   href='/'
                   variant='warning'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Warning Button Link
                 </ButtonLink>
@@ -682,16 +674,16 @@ export default function ButtonPage() {
                   href='/'
                   variant='ghost'
                   size='lg'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Ghost Button Link
                 </ButtonLink>
                 <ButtonLink
                   href='/'
                   variant='ghost'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Ghost Button Link
                 </ButtonLink>
@@ -699,8 +691,8 @@ export default function ButtonPage() {
                   href='/'
                   variant='ghost'
                   size='sm'
-                  leftIcon={FiPlus}
-                  rightIcon={FiArrowRight}
+                  leftIcon={Plus}
+                  rightIcon={ArrowRight}
                 >
                   Ghost Button Link
                 </ButtonLink>

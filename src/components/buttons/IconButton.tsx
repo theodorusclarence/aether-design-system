@@ -1,6 +1,5 @@
+import { Loader2, LucideIcon } from 'lucide-react';
 import * as React from 'react';
-import { IconType } from 'react-icons';
-import { ImSpinner2 } from 'react-icons/im';
 
 import clsxm from '@/lib/clsxm';
 
@@ -18,7 +17,7 @@ type IconButtonProps = {
   isLoading?: boolean;
   variant?: (typeof IconButtonVariant)[number];
   size?: (typeof IconButtonSize)[number];
-  icon?: IconType;
+  icon?: LucideIcon;
   iconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
 
@@ -34,7 +33,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
       iconClassName,
       ...rest
     },
-    ref
+    ref,
   ) => {
     const disabled = isLoading || buttonDisabled;
 
@@ -114,7 +113,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
           'disabled:cursor-not-allowed',
           isLoading &&
             'relative text-transparent transition-none hover:text-transparent disabled:cursor-wait',
-          className
+          className,
         )}
         {...rest}
       >
@@ -130,16 +129,16 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
                   'warning',
                 ].includes(variant),
                 'text-primary-500': ['outline', 'ghost'].includes(variant),
-              }
+              },
             )}
           >
-            <ImSpinner2 className='animate-spin' />
+            <Loader2 size={18} className='animate-spin' />
           </div>
         )}
         {Icon && <Icon size='1em' className={clsxm(iconClassName)} />}
       </button>
     );
-  }
+  },
 );
 
 export default IconButton;

@@ -1,6 +1,6 @@
 import { RowData, Table } from '@tanstack/react-table';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
 import clsxm from '@/lib/clsxm';
 import { buildPaginationControl } from '@/lib/pagination';
@@ -36,7 +36,7 @@ export default function PaginationControl<T extends RowData>({
     <div
       className={clsxm(
         'flex items-center justify-between gap-x-2  md:justify-end',
-        className
+        className,
       )}
       {...rest}
     >
@@ -44,7 +44,7 @@ export default function PaginationControl<T extends RowData>({
         <Button
           variant='ghost'
           size='sm'
-          leftIcon={HiChevronLeft}
+          leftIcon={ChevronLeft}
           disabled={!table.getCanPreviousPage()}
           onClick={() => table.previousPage()}
         >
@@ -57,7 +57,7 @@ export default function PaginationControl<T extends RowData>({
             size='sm'
             className={clsxm(
               currentPage === page && 'bg-primary-400',
-              'min-w-[2rem]'
+              'min-w-[2rem]',
             )}
             onClick={() => handlePageControlClick(page)}
           >
@@ -67,7 +67,7 @@ export default function PaginationControl<T extends RowData>({
         <Button
           variant='ghost'
           size='sm'
-          rightIcon={HiChevronRight}
+          rightIcon={ChevronRight}
           disabled={
             !table.getCanNextPage() ||
             data.length < table.getState().pagination.pageSize

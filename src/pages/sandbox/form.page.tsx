@@ -1,6 +1,6 @@
+import { Search, XCircle } from 'lucide-react';
 import * as React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { HiOutlineSearch, HiOutlineXCircle } from 'react-icons/hi';
 
 import logger from '@/lib/logger';
 
@@ -67,10 +67,10 @@ export default function FormSandbox() {
                 placeholder='Search something...'
                 validation={{ required: 'Search must be filled' }}
                 helperText='This is a helper text'
-                leftIcon={HiOutlineSearch}
+                leftIcon={Search}
                 rightNode={
                   <button type='button' className='p-1'>
-                    <HiOutlineXCircle className='text-xl text-typo-icons' />
+                    <XCircle size={18} className='text-typo-icons' />
                   </button>
                 }
               />
