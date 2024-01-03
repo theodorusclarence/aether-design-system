@@ -66,8 +66,8 @@ type TypographyProps<T extends React.ElementType> = {
 
 /** @see https://www.benmvp.com/blog/forwarding-refs-polymorphic-react-component-typescript/ */
 type TypographyComponent = <T extends React.ElementType = 'p'>(
-  props: TypographyProps<T>
-) => React.ReactElement | null;
+  props: TypographyProps<T>,
+) => React.ReactNode | null;
 
 const Typography: TypographyComponent = React.forwardRef(
   <T extends React.ElementType = 'p'>(
@@ -80,7 +80,7 @@ const Typography: TypographyComponent = React.forwardRef(
       font,
       ...rest
     }: TypographyProps<T>,
-    ref?: React.ComponentPropsWithRef<T>['ref']
+    ref?: React.ComponentPropsWithRef<T>['ref'],
   ) => {
     const Component = as || 'p';
     return (
@@ -123,14 +123,14 @@ const Typography: TypographyComponent = React.forwardRef(
             font === 'inter' && ['font-primary'],
           ],
           //#endregion  //*======== Font ===========
-          className
+          className,
         )}
         {...rest}
       >
         {children}
       </Component>
     );
-  }
+  },
 );
 
 export default Typography;
